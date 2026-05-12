@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Specials | Bob Weaver Chevrolet GMC | Pottsville, PA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       CSS CUSTOM PROPERTIES — BOB WEAVER BRAND
+       Per Brand Guide v4 (Spring 2025)
+       ============================================ */
+    :root {
+      --americana-orange: #DC4405;
+      --loyal-navy: #201747;
+      --service-blue: #0077C8;
+      --parchment: #F9F0D9;
+      --primary: var(--service-blue);
+      --primary-dark: var(--loyal-navy);
+      --primary-light: #e6f2fc;
+      --accent: var(--americana-orange);
+      --neutral-900: #1a1a1a;
+      --neutral-700: #404040;
+      --neutral-500: #666666;
+      --neutral-200: #d9d9d9;
+      --neutral-100: #f2f2f2;
+      --neutral-0: #ffffff;
+      --font-heading: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+      --font-body: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--neutral-900);
+      background: var(--neutral-0);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ============================================
+       TOP UTILITY BAR
+       ============================================ */
+    .top-bar {
+      background: var(--loyal-navy);
+      color: var(--neutral-0);
+      font-size: 0.8rem;
+      padding: 6px 0;
+      font-family: var(--font-body);
+    }
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar a { color: var(--neutral-200); transition: color .2s; }
+    .top-bar a:hover { color: var(--americana-orange); }
+    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 16px; }
+    .top-bar-right { gap: 20px; }
+    .top-bar .separator { color: var(--neutral-500); }
+
+    /* ============================================
+       HEADER / NAV
+       ============================================ */
+    .header {
+      background: var(--neutral-0);
+      border-bottom: 3px solid var(--americana-orange);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.1;
+      color: var(--loyal-navy);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--neutral-500);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .logo-brands {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .logo-brands .brand-badge {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .brand-chevy { background: var(--loyal-navy); color: #fff; }
+    .brand-gmc { background: var(--americana-orange); color: #fff; }
+
+    .nav { display: flex; align-items: center; gap: 24px; }
+    .nav a {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--neutral-700);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: all .2s;
+    }
+    .nav a:hover, .nav a.active {
+      color: var(--americana-orange);
+      border-bottom-color: var(--americana-orange);
+    }
+    .nav-phone {
+      background: var(--americana-orange);
+      color: #fff !important;
+      padding: 8px 16px !important;
+      border-radius: 4px;
+      border-bottom: none !important;
+    }
+    .nav-phone:hover { background: #b83800; }
+
+    .mobile-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--loyal-navy); }
+
+    /* ============================================
+       CONTAINER
+       ============================================ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* ============================================
+       HERO BANNER
+       ============================================ */
+    .hero {
+      background: linear-gradient(135deg, var(--loyal-navy) 0%, #1a1040 50%, #0d0b24 100%);
+      color: var(--neutral-0);
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.03"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></linearGradient></defs><rect fill="url(%23g)" width="1200" height="600"/><circle cx="200" cy="300" r="300" fill="%23ffffff" opacity="0.02"/><circle cx="1000" cy="200" r="250" fill="%23ffffff" opacity="0.015"/></svg>') center / cover;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-tag {
+      display: inline-block;
+      background: var(--americana-orange);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 6px 24px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--americana-orange);
+    }
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--americana-orange);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 40px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all .3s;
+    }
+    .hero-cta:hover { background: #b83800; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(220,68,5,.4); }
+
+    /* ============================================
+       ANNOUNCEMENT BAR
+       ============================================ */
+    .announcement-bar {
+      background: var(--loyal-navy);
+      color: var(--neutral-0);
+      text-align: center;
+      padding: 16px 20px;
+      font-family: var(--font-heading);
+    }
+    .announcement-bar h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .announcement-bar h2 em {
+      font-style: normal;
+      color: var(--americana-orange);
+    }
+
+    /* ============================================
+       SECTION INTRO
+       ============================================ */
+    .section-intro {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+    .section-intro h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--loyal-navy);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .section-intro p {
+      font-size: 1.05rem;
+      color: var(--neutral-500);
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+    .btn-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 12px 28px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--americana-orange); color: #fff; border: 2px solid var(--americana-orange); }
+    .btn-primary:hover { background: #b83800; border-color: #b83800; }
+    .btn-outline { background: transparent; color: var(--loyal-navy); border: 2px solid var(--loyal-navy); }
+    .btn-outline:hover { background: var(--loyal-navy); color: #fff; }
+
+    /* ============================================
+       SECTION BANNER
+       ============================================ */
+    .section-banner {
+      background: linear-gradient(90deg, var(--loyal-navy), #2a1d5e);
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .section-banner h2 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--neutral-0);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .section-banner h2 em {
+      font-style: normal;
+      color: var(--americana-orange);
+    }
+
+    /* ============================================
+       TRADE-IN BANNER
+       ============================================ */
+    .trade-banner {
+      background: var(--parchment);
+      color: var(--loyal-navy);
+      text-align: center;
+      padding: 28px 20px;
+      border-top: 4px solid var(--americana-orange);
+    }
+    .trade-banner h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .trade-banner p { font-size: 0.95rem; margin-bottom: 14px; }
+    .trade-banner .btn {
+      background: var(--americana-orange);
+      color: #fff;
+      border: 2px solid var(--americana-orange);
+    }
+    .trade-banner .btn:hover { background: #b83800; border-color: #b83800; }
+
+    /* ============================================
+       SPECIALS GRID
+       ============================================ */
+    .specials-section { padding: 40px 0; background: var(--parchment); }
+    .specials-section .section-label {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .specials-section .section-label span {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 4px 14px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .brand-section-title {
+      text-align: center;
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .specials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ============================================
+       SPECIAL CARD
+       ============================================ */
+    .special-card {
+      background: var(--neutral-0);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,.08);
+      transition: all .3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .special-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.15);
+    }
+    .card-image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Vehicle image placeholder gradient */
+    .card-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.5);
+    }
+    .card-image-placeholder.chevy-bg {
+      background: linear-gradient(135deg, var(--loyal-navy) 0%, #2a1d5e 50%, #3d2d7a 100%);
+    }
+    .card-image-placeholder.gmc-bg {
+      background: linear-gradient(135deg, #1a1a1a 0%, #3a1a0a 50%, var(--americana-orange) 100%);
+    }
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.65rem;
+      padding: 4px 10px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .badge-chevy { background: var(--loyal-navy); color: #fff; }
+    .badge-gmc { background: var(--americana-orange); color: #fff; }
+    .card-price-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--americana-orange);
+      color: #fff;
+      font-family: var(--font-heading);
+      padding: 8px 16px;
+      border-radius: 8px 0 0 0;
+    }
+    .card-price-badge .amount {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .card-price-badge .per-month {
+      font-size: 0.7rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    .card-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-body h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--loyal-navy);
+      margin-bottom: 2px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .card-body .trim {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.82rem;
+      color: var(--neutral-500);
+      margin-bottom: 10px;
+    }
+    .card-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      font-size: 0.8rem;
+      color: var(--neutral-700);
+      margin-bottom: 14px;
+    }
+    .card-details dt {
+      font-weight: 600;
+      color: var(--neutral-500);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card-details dd {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .card-incentives {
+      background: var(--parchment);
+      border-left: 3px solid var(--americana-orange);
+      border-radius: 0 4px 4px 0;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+      font-size: 0.78rem;
+      color: var(--loyal-navy);
+      line-height: 1.5;
+    }
+    .card-incentives strong { font-weight: 700; }
+    .card-footer {
+      margin-top: auto;
+      display: flex;
+      gap: 8px;
+    }
+    .card-footer .btn {
+      flex: 1;
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 10px 12px;
+    }
+
+    /* ============================================
+       DIVIDER
+       ============================================ */
+    .brand-divider {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+    .brand-divider h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--loyal-navy);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .brand-divider h3::before,
+    .brand-divider h3::after {
+      content: '';
+      height: 3px;
+      width: 60px;
+      background: var(--americana-orange);
+    }
+
+    /* ============================================
+       PRE-OWNED / SERVICE SECTIONS
+       ============================================ */
+    .promo-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .promo-section.alt { background: var(--neutral-100); }
+    .promo-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--loyal-navy);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .promo-section p {
+      font-size: 1rem;
+      color: var(--neutral-500);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .promo-card {
+      background: var(--neutral-0);
+      border-radius: 8px;
+      padding: 28px 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      transition: all .2s;
+    }
+    .promo-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+    .promo-card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .promo-card h4 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--loyal-navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .promo-card p { font-size: 0.85rem; color: var(--neutral-500); margin-bottom: 0; }
+
+    /* ============================================
+       CONTACT / CTA SECTION
+       ============================================ */
+    .contact-section {
+      background: linear-gradient(135deg, var(--loyal-navy), #2a1d5e);
+      color: var(--neutral-0);
+      padding: 50px 20px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .contact-info h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    .contact-info .detail {
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .contact-info .detail strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+      opacity: 0.7;
+    }
+    .hours-table {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    .hours-table h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+    }
+    .hours-table table { width: 100%; border-collapse: collapse; }
+    .hours-table td {
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .hours-table td:last-child { text-align: right; }
+
+    /* ============================================
+       DISCLAIMER
+       ============================================ */
+    .disclaimer {
+      background: var(--neutral-100);
+      padding: 24px 20px;
+      font-size: 0.72rem;
+      color: var(--neutral-500);
+      line-height: 1.7;
+      text-align: center;
+    }
+    .disclaimer .container { max-width: 900px; }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--loyal-navy);
+      color: var(--neutral-200);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .footer a { color: var(--americana-orange); }
+    .footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 992px) {
+      .specials-grid { grid-template-columns: repeat(2, 1fr); }
+      .promo-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 2.4rem; }
+    }
+    @media (max-width: 768px) {
+      .top-bar-left { display: none; }
+      .nav { display: none; }
+      .mobile-toggle { display: block; }
+      .specials-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .hero { padding: 40px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .promo-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP UTILITY BAR ============ -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>2174 W Market St, Pottsville, PA 17901</span>
+        <span class="separator">|</span>
+        <span>Your One-Stop Shop &mdash; Serving Schuylkill County for Nearly 30 Years</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:5706227191">Sales: (570) 622-7191</a>
+        <a href="tel:5706227191">Service: (570) 622-7191</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="header">
+    <div class="container">
+      <a href="https://www.bobweaverauto.com" class="logo">
+        <div class="logo-text">
+          Bob Weaver
+          <span>Chevrolet &bull; GMC</span>
+        </div>
+        <div class="logo-brands">
+          <span class="brand-badge brand-chevy">Chevy</span>
+          <span class="brand-badge brand-gmc">GMC</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="https://www.bobweaverauto.com/new-inventory/index.htm">New Inventory</a>
+        <a href="https://www.bobweaverauto.com/used-inventory/index.htm">Pre-Owned</a>
+        <a href="#" class="active">Specials</a>
+        <a href="https://www.bobweaverauto.com/finance/index.htm">Finance</a>
+        <a href="https://www.bobweaverauto.com/service/index.htm">Service</a>
+        <a href="tel:5706227191" class="nav-phone">Call (570) 622-7191</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- ============ HERO BANNER ============ -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Limited Time Offers</div>
+      <h1>May <em>Lease Specials</em></h1>
+      <p>Exceptional lease deals on new Chevrolet and GMC vehicles. Low monthly payments, competitive down payments, and no games &mdash; just honest pricing from your neighbors at Bob Weaver.</p>
+      <a href="#specials" class="hero-cta">View Current Specials</a>
+    </div>
+  </section>
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="announcement-bar">
+    <h2>Hundreds of New Vehicles in Stock &mdash; <em>No Tariff Pricing!</em></h2>
+  </div>
+
+  <!-- ============ SECTION INTRO ============ -->
+  <section class="section-intro">
+    <h2>This Month's Best Deals at Bob Weaver</h2>
+    <p>Browse our hand-picked lease specials below. Every deal includes competitive rates, transparent terms, and the award-winning service you've trusted for nearly 30 years in Pottsville, PA.</p>
+    <div class="btn-row">
+      <a href="https://www.bobweaverauto.com/new-inventory/index.htm" class="btn btn-primary">Browse All Inventory</a>
+      <a href="https://www.bobweaverauto.com/finance/index.htm" class="btn btn-outline">Get Pre-Approved</a>
+      <a href="tel:5706227191" class="btn btn-outline">Call Us Today</a>
+    </div>
+  </section>
+
+  <!-- ============ SECTION BANNER ============ -->
+  <div class="section-banner">
+    <h2>Special Event <em>Lease &amp; Finance Offers!</em></h2>
+  </div>
+
+  <!-- ============ TRADE BANNER ============ -->
+  <div class="trade-banner">
+    <h3>Get Top Dollar for Your Trade-In</h3>
+    <p>Your current vehicle may be worth more than you think. Get an instant online appraisal today!</p>
+    <a href="https://www.bobweaverauto.com" class="btn">Value My Trade</a>
+  </div>
+
+  <!-- ============ LEASE SPECIALS ============ -->
+  <section class="specials-section" id="specials">
+
+    <!-- CHEVROLET SPECIALS -->
+    <div class="brand-divider">
+      <h3>Chevrolet Specials</h3>
+    </div>
+
+    <div class="specials-grid">
+
+      <!-- CARD 1: 2026 Chevrolet Trax 1RS -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder chevy-bg">
+            <!-- Replace with: <img src="trax.jpg" alt="2026 Chevrolet Trax 1RS"> -->
+            2026 Chevrolet Trax
+          </div>
+          <span class="card-badge badge-chevy">Chevrolet</span>
+          <div class="card-price-badge">
+            <div class="amount">$279</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Chevrolet Trax</h3>
+          <div class="trim">1RS &bull; Marina Blue Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$26,715</dd>
+            <dt>Selling Price</dt>
+            <dd>$25,575</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,500</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>C26567</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $1,000 Customer Cash Rebate &bull; $500 GM Lease Loyalty or Conquest
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: 2026 Chevrolet Trailblazer ACTIV -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder chevy-bg">
+            <!-- Replace with: <img src="trailblazer.jpg" alt="2026 Chevrolet Trailblazer ACTIV"> -->
+            2026 Chevrolet Trailblazer
+          </div>
+          <span class="card-badge badge-chevy">Chevrolet</span>
+          <div class="card-price-badge">
+            <div class="amount">$349</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Chevrolet Trailblazer</h3>
+          <div class="trim">ACTIV &bull; Mosaic Black Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$31,675</dd>
+            <dt>Selling Price</dt>
+            <dd>$30,275</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,600</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>C26558</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $2,500 Customer Cash Rebate &bull; $1,500 Lease Loyalty or Conquest
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: 2026 Chevrolet Equinox LT -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder chevy-bg">
+            <!-- Replace with: <img src="equinox.jpg" alt="2026 Chevrolet Equinox LT"> -->
+            2026 Chevrolet Equinox
+          </div>
+          <span class="card-badge badge-chevy">Chevrolet</span>
+          <div class="card-price-badge">
+            <div class="amount">$349</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Chevrolet Equinox</h3>
+          <div class="trim">LT &bull; Summit White</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$35,355</dd>
+            <dt>Selling Price</dt>
+            <dd>$32,405</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,500</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>C26523</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $1,000 Customer Cash Rebate &bull; $1,500 Lease Loyalty or Conquest
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: 2026 Chevrolet Silverado 1500 LT Trail Boss -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder chevy-bg">
+            <!-- Replace with: <img src="silverado.jpg" alt="2026 Chevrolet Silverado 1500 LT Trail Boss"> -->
+            2026 Chevrolet Silverado 1500
+          </div>
+          <span class="card-badge badge-chevy">Chevrolet</span>
+          <div class="card-price-badge">
+            <div class="amount">$599</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Chevrolet Silverado 1500</h3>
+          <div class="trim">LT Trail Boss &bull; Sterling Gray Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$64,800</dd>
+            <dt>Selling Price</dt>
+            <dd>$60,454</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,700</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>C26657</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $4,500 Customer Cash Rebate &bull; $2,500 Chevrolet Lease Loyalty
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /specials-grid Chevy -->
+
+    <!-- GMC SPECIALS -->
+    <div class="brand-divider" style="margin-top: 20px;">
+      <h3>GMC Specials</h3>
+    </div>
+
+    <div class="specials-grid">
+
+      <!-- CARD 5: 2026 GMC Terrain Denali -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder gmc-bg">
+            <!-- Replace with: <img src="terrain.jpg" alt="2026 GMC Terrain Denali"> -->
+            2026 GMC Terrain
+          </div>
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <div class="amount">$399</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Terrain</h3>
+          <div class="trim">Denali &bull; Volcanic Red Tintcoat</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$38,425</dd>
+            <dt>Selling Price</dt>
+            <dd>$35,420</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,800</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26539</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $2,000 Customer Cash Rebate &bull; Lease Loyalty or Conquest
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: 2026 GMC Sierra 1500 AT4 -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder gmc-bg">
+            <!-- Replace with: <img src="sierra.jpg" alt="2026 GMC Sierra 1500 AT4"> -->
+            2026 GMC Sierra 1500
+          </div>
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <div class="amount">$576</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Sierra 1500</h3>
+          <div class="trim">AT4 &bull; Sterling Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$66,060</dd>
+            <dt>Selling Price</dt>
+            <dd>$61,760</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,500</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26612</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> Due at signing or equity in current lease
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7: 2026 GMC Canyon AT4 -->
+      <div class="special-card">
+        <div class="card-image">
+          <div class="card-image-placeholder gmc-bg">
+            <!-- Replace with: <img src="canyon.jpg" alt="2026 GMC Canyon AT4"> -->
+            2026 GMC Canyon
+          </div>
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <div class="amount">$529</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Canyon</h3>
+          <div class="trim">AT4 &bull; Sterling Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$53,120</dd>
+            <dt>Selling Price</dt>
+            <dd>$50,120</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing</dt>
+            <dd>$3,500</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26570</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $6,000 Customer Cash Rebate &bull; $250 Buick/GMC Lease Loyalty
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com" class="btn btn-outline">View Vehicle</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /specials-grid GMC -->
+
+  </section>
+
+  <!-- ============ PRE-OWNED SECTION ============ -->
+  <section class="promo-section">
+    <h2>Pre-Owned Inventory</h2>
+    <p>Certified quality. Transparent pricing. Explore our selection of hand-picked pre-owned vehicles.</p>
+    <div class="btn-row">
+      <a href="https://www.bobweaverauto.com/used-inventory/index.htm" class="btn btn-primary">Shop Pre-Owned</a>
+      <a href="https://www.bobweaverauto.com" class="btn btn-outline">Certified Pre-Owned</a>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE & PARTS ============ -->
+  <section class="promo-section alt">
+    <h2>Service, Parts &amp; Accessories</h2>
+    <p>Keep your vehicle in peak condition with our expert service department and genuine OEM parts.</p>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <div class="icon">&#128295;</div>
+        <h4>Schedule Service</h4>
+        <p>Convenient online scheduling for oil changes, tire rotations, and more.</p>
+      </div>
+      <div class="promo-card">
+        <div class="icon">&#9881;&#65039;</div>
+        <h4>Order Parts</h4>
+        <p>Genuine OEM parts and accessories for your Chevrolet or GMC.</p>
+      </div>
+      <div class="promo-card">
+        <div class="icon">&#128176;</div>
+        <h4>Service Specials</h4>
+        <p>Check out our current service and parts coupons to save.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / HOURS ============ -->
+  <section class="contact-section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Visit Bob Weaver Today</h2>
+        <div class="detail">
+          <strong>Address</strong>
+          2174 W Market St<br>Pottsville, PA 17901
+        </div>
+        <div class="detail">
+          <strong>Sales</strong>
+          <a href="tel:5706227191" style="color: var(--americana-orange);">(570) 622-7191</a>
+        </div>
+        <div class="detail">
+          <strong>Service</strong>
+          <a href="tel:5706227191" style="color: var(--americana-orange);">(570) 622-7191</a>
+        </div>
+        <div style="margin-top: 20px;">
+          <a href="https://www.bobweaverauto.com" class="btn btn-primary">Get Directions</a>
+        </div>
+      </div>
+      <div class="hours-table">
+        <h3>Sales Hours</h3>
+        <table>
+          <tr><td>Monday</td><td>9:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>9:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>9:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Thursday</td><td>9:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Friday</td><td>9:00 AM &ndash; 5:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM &ndash; 3:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DISCLAIMER ============ -->
+  <section class="disclaimer">
+    <div class="container">
+      *All lease payments are based on approved credit through GM Financial. Payments shown are plus tax, title, license, dealer fees, and first month's payment. All leases are 36 months at 10,000 miles per year. Lessee is responsible for excess mileage and wear charges at lease end. Customer Cash Rebates (CCR) and loyalty/conquest incentives are subject to eligibility requirements. Lease loyalty requires a current GM lease. Lease conquest requires a current competitive brand lease. Not all customers will qualify. Offers cannot be combined with other promotions. Prices and payments are based on specific stock numbers shown and are subject to prior sale. Photos are for illustration purposes only. See dealer for complete details. Offers expire 05/31/2026.
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.bobweaverauto.com">Home</a>
+        <a href="https://www.bobweaverauto.com/new-inventory/index.htm">New Inventory</a>
+        <a href="https://www.bobweaverauto.com/used-inventory/index.htm">Pre-Owned</a>
+        <a href="https://www.bobweaverauto.com/finance/index.htm">Finance</a>
+        <a href="https://www.bobweaverauto.com/service/index.htm">Service</a>
+        <a href="https://www.bobweaverauto.com/parts/index.htm">Parts</a>
+        <a href="https://www.bobweaverauto.com/contactus/index.htm">Contact</a>
+      </div>
+      <p>&copy; 2026 Bob Weaver Chevrolet GMC &bull; 2174 W Market St, Pottsville, PA 17901 &bull; (570) 622-7191</p>
+      <p style="margin-top: 6px; opacity: 0.5;">Privacy Policy &bull; Terms of Use &bull; Accessibility</p>
+    </div>
+  </footer>
+
+</body>
+</html>
