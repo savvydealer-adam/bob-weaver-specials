@@ -172,7 +172,8 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.03"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></linearGradient></defs><rect fill="url(%23g)" width="1200" height="600"/><circle cx="200" cy="300" r="300" fill="%23ffffff" opacity="0.02"/><circle cx="1000" cy="200" r="250" fill="%23ffffff" opacity="0.015"/></svg>') center / cover;
+      background: url('images/industrial-adhesive.png') repeat center / 400px;
+      opacity: 0.08;
     }
     .hero-content { position: relative; z-index: 1; }
     .hero-tag {
@@ -231,6 +232,16 @@
       text-align: center;
       padding: 16px 20px;
       font-family: var(--font-heading);
+      position: relative;
+      overflow: hidden;
+    }
+    .announcement-bar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/industrial-adhesive.png') repeat center / 400px;
+      opacity: 0.08;
+      pointer-events: none;
     }
     .announcement-bar h2 {
       font-size: 1.4rem;
@@ -290,6 +301,16 @@
       background: linear-gradient(90deg, var(--loyal-navy), #2a1d5e);
       text-align: center;
       padding: 24px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/industrial-adhesive.png') repeat center / 400px;
+      opacity: 0.08;
+      pointer-events: none;
     }
     .section-banner h2 {
       font-family: var(--font-heading);
@@ -333,7 +354,19 @@
     /* ============================================
        SPECIALS GRID
        ============================================ */
-    .specials-section { padding: 40px 0; background: var(--parchment); }
+    .specials-section {
+      padding: 40px 0;
+      background: var(--parchment);
+      position: relative;
+    }
+    .specials-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/distressed-newspaper.png') repeat center / 500px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
     .specials-section .section-label {
       text-align: center;
       margin-bottom: 8px;
@@ -367,6 +400,8 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
+      position: relative;
+      z-index: 1;
     }
 
     /* ============================================
@@ -520,6 +555,8 @@
     .brand-divider {
       text-align: center;
       padding: 30px 20px 10px;
+      position: relative;
+      z-index: 1;
     }
     .brand-divider h3 {
       font-family: var(--font-heading);
@@ -548,7 +585,18 @@
       padding: 50px 20px;
       text-align: center;
     }
-    .promo-section.alt { background: var(--neutral-100); }
+    .promo-section.alt {
+      background: var(--neutral-100);
+      position: relative;
+    }
+    .promo-section.alt::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/distressed-newspaper.png') repeat center / 500px;
+      opacity: 0.04;
+      pointer-events: none;
+    }
     .promo-section h2 {
       font-family: var(--font-heading);
       font-size: 1.8rem;
