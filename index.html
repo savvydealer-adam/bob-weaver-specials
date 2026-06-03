@@ -419,6 +419,7 @@
       transition: all .3s;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
     .special-card:hover {
       transform: translateY(-4px);
@@ -527,6 +528,16 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+    .card-body h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card-body h3 a::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
     .card-body .trim {
       font-family: var(--font-body);
       font-weight: 500;
@@ -587,6 +598,8 @@
       margin-top: auto;
       display: flex;
       gap: 8px;
+      position: relative;
+      z-index: 2;
     }
     .card-footer .btn {
       flex: 1;
@@ -817,7 +830,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 Chevrolet Trax</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-trax-kl77lhep0tc073508" target="_parent">2026 Chevrolet Trax</a></h3>
           <div class="trim">Sport Utility &bull; Summit White</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -856,7 +869,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 Chevrolet Equinox</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-equinox-3gnaxpeg5tl327992" target="_parent">2026 Chevrolet Equinox</a></h3>
           <div class="trim">Sport Utility &bull; Radiant Red Tintcoat</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -894,7 +907,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 Chevrolet Blazer EV</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-blazer-ev-3gnkdgrj0ts130866" target="_parent">2026 Chevrolet Blazer EV</a></h3>
           <div class="trim">Sport Utility &bull; Sterling Gray Metallic</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -934,7 +947,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 Chevrolet Silverado 1500</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-silverado-1500-1gcukded4tz372701" target="_parent">2026 Chevrolet Silverado 1500</a></h3>
           <div class="trim">Crew Cab &bull; Black</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -979,7 +992,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 GMC Terrain</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-terrain-3gkalueg3tl284180" target="_parent">2026 GMC Terrain</a></h3>
           <div class="trim">Denali &bull; Volcanic Red Tintcoat</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -1018,7 +1031,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 GMC Sierra EV</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-ev-1gt1eseh7tu413112" target="_parent">2026 GMC Sierra EV</a></h3>
           <div class="trim">Crew Cab &bull; Dark Ember Metallic</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -1058,7 +1071,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 GMC Canyon</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-canyon-1gtp2bek1t1159221" target="_parent">2026 GMC Canyon</a></h3>
           <div class="trim">AT4 &bull; Sterling Metallic</div>
           <dl class="card-details">
             <dt>MSRP</dt>
@@ -1097,7 +1110,7 @@
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 GMC Sierra 1500</h3>
+          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-1500-3gtpucek4tg107230" target="_parent">2026 GMC Sierra 1500</a></h3>
           <div class="trim">Crew Cab &bull; Summit White</div>
           <dl class="card-details">
             <dt>MSRP</dt>
