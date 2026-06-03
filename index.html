@@ -468,7 +468,6 @@
     }
     .badge-chevy { background: var(--loyal-navy); color: #fff; }
     .badge-gmc { background: var(--americana-orange); color: #fff; }
-    .badge-jeep { background: #3d6b35; color: #fff; }
     .card-price-badge {
       position: absolute;
       bottom: 0;
@@ -478,6 +477,15 @@
       font-family: var(--font-heading);
       padding: 8px 16px;
       border-radius: 8px 0 0 0;
+    }
+    .card-price-badge .deal-label {
+      display: block;
+      font-size: 0.55rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.85;
+      margin-bottom: 2px;
     }
     .card-price-badge .amount {
       font-size: 1.8rem;
@@ -542,6 +550,25 @@
       line-height: 1.5;
     }
     .card-incentives strong { font-weight: 700; }
+    .card-alt-offer {
+      background: var(--loyal-navy);
+      color: #fff;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 0.78rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .card-alt-offer strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--americana-orange);
+    }
     .card-footer {
       margin-top: auto;
       display: flex;
@@ -751,47 +778,48 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-tag">Limited Time Offers</div>
-      <h1>May <em>Lease Specials</em></h1>
-      <p>Exceptional lease deals on new Chevrolet, GMC, and Jeep vehicles. Low monthly payments, competitive down payments, and no games &mdash; just honest pricing from your neighbors at Bob Weaver.</p>
+      <h1>June <em>Specials</em></h1>
+      <p>Exceptional lease and finance deals on new Chevrolet and GMC vehicles. Low monthly payments, competitive down payments, and no games &mdash; just honest pricing from your neighbors at Bob Weaver.</p>
     </div>
   </section>
 
-  <!-- ============ LEASE SPECIALS ============ -->
+  <!-- ============ SPECIALS ============ -->
   <section class="specials-section" id="specials">
 
     <div class="specials-grid">
 
-      <!-- JEEP (1) -->
+      <!-- CHEVROLET (4) -->
 
-      <!-- 2026 Jeep Wrangler Sport -->
+      <!-- 2026 Chevrolet Trax — FINANCE -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/wrangler.jpg" alt="2026 Jeep Wrangler Sport">
-          <span class="card-badge badge-jeep">Jeep</span>
+          <img src="images/trax.jpg" alt="2026 Chevrolet Trax">
+          <span class="card-badge badge-chevy">Chevrolet</span>
           <div class="card-price-badge">
-            <div class="amount">$523</div>
-            <div class="per-month">/mo*</div>
+            <span class="deal-label">Finance</span>
+            <div class="amount">$363</div>
+            <div class="per-month">/mo&dagger;</div>
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 Jeep Wrangler</h3>
-          <div class="trim">Sport 2-Door &bull; Black Clear Coat</div>
+          <h3>2026 Chevrolet Trax</h3>
+          <div class="trim">Sport Utility &bull; Summit White</div>
           <dl class="card-details">
             <dt>MSRP</dt>
-            <dd>$38,350</dd>
+            <dd>$26,385</dd>
+            <dt>Selling Price</dt>
+            <dd>$25,063</dd>
             <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
-            <dd>$0</dd>
-            <dt>Total of Payments</dt>
-            <dd>$18,828</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
+            <dd>84 Months</dd>
+            <dt>APR</dt>
+            <dd>5.9%</dd>
+            <dt>Due at Signing&dagger;</dt>
+            <dd>$1,000</dd>
             <dt>Stock #</dt>
-            <dd>J26530</dd>
+            <dd>C26630</dd>
           </dl>
           <div class="card-incentives">
-            <strong>$0 Down!</strong> Sign and drive &bull; Includes $1,000 Stellantis Lease Loyalty or Conquest
+            <strong>Includes:</strong> $1,250 Rebate &bull; $750 Bonus Cash &bull; $500 My GM Rewards Sign-Up Save
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -800,37 +828,36 @@
         </div>
       </div>
 
-      <!-- GMC (3) -->
-
-      <!-- 2026 GMC Terrain Denali -->
+      <!-- 2026 Chevrolet Equinox — LEASE -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/terrain.jpg" alt="2026 GMC Terrain Denali">
-          <span class="card-badge badge-gmc">GMC</span>
+          <img src="images/equinox.jpg" alt="2026 Chevrolet Equinox">
+          <span class="card-badge badge-chevy">Chevrolet</span>
           <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
             <div class="amount">$399</div>
             <div class="per-month">/mo*</div>
           </div>
         </div>
         <div class="card-body">
-          <h3>2026 GMC Terrain</h3>
-          <div class="trim">Denali &bull; Volcanic Red Tintcoat</div>
+          <h3>2026 Chevrolet Equinox</h3>
+          <div class="trim">Sport Utility &bull; Radiant Red Tintcoat</div>
           <dl class="card-details">
             <dt>MSRP</dt>
-            <dd>$38,425</dd>
+            <dd>$36,120</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
             <dt>Due at Signing*</dt>
-            <dd>$3,800</dd>
+            <dd>$1,800</dd>
             <dt>Total of Payments</dt>
             <dd>$14,364</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
-            <dd>G26539</dd>
+            <dd>C26574</dd>
           </dl>
           <div class="card-incentives">
-            <strong>Includes:</strong> $2,000 Customer Cash Rebate &bull; Lease Loyalty or Conquest
+            <strong>Includes:</strong> $1,500 Rebate &bull; $1,000 Lease Loyalty or Conquest &bull; $500 My GM Rewards Sign-Up Save
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -839,199 +866,13 @@
         </div>
       </div>
 
-      <!-- 2026 GMC Canyon AT4 -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/canyon.jpg" alt="2026 GMC Canyon AT4">
-          <span class="card-badge badge-gmc">GMC</span>
-          <div class="card-price-badge">
-            <div class="amount">$529</div>
-            <div class="per-month">/mo*</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>2026 GMC Canyon</h3>
-          <div class="trim">AT4 &bull; Sterling Metallic</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$53,120</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
-            <dd>$3,500</dd>
-            <dt>Total of Payments</dt>
-            <dd>$19,044</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>G26570</dd>
-          </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $6,000 Customer Cash Rebate &bull; $250 Buick/GMC Lease Loyalty
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 GMC Sierra 1500 AT4 -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/sierra.jpg" alt="2026 GMC Sierra 1500 AT4">
-          <span class="card-badge badge-gmc">GMC</span>
-          <div class="card-price-badge">
-            <div class="amount">$576</div>
-            <div class="per-month">/mo*</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>2026 GMC Sierra 1500</h3>
-          <div class="trim">AT4 &bull; Sterling Metallic</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$66,060</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
-            <dd>$3,500</dd>
-            <dt>Total of Payments</dt>
-            <dd>$20,736</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>G26612</dd>
-          </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> Due at signing or equity in current lease
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- CHEVROLET (4) -->
-
-      <!-- 2026 Chevrolet Trax 1RS -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/trax.jpg" alt="2026 Chevrolet Trax 1RS">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-          <div class="card-price-badge">
-            <div class="amount">$279</div>
-            <div class="per-month">/mo*</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>2026 Chevrolet Trax</h3>
-          <div class="trim">1RS &bull; Marina Blue Metallic</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$26,715</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
-            <dd>$3,500</dd>
-            <dt>Total of Payments</dt>
-            <dd>$10,044</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>C26567</dd>
-          </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $1,000 Customer Cash Rebate &bull; $500 GM Lease Loyalty or Conquest
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Chevrolet Trailblazer ACTIV -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/trailblazer.jpg" alt="2026 Chevrolet Trailblazer ACTIV">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-          <div class="card-price-badge">
-            <div class="amount">$349</div>
-            <div class="per-month">/mo*</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>2026 Chevrolet Trailblazer</h3>
-          <div class="trim">ACTIV &bull; Mosaic Black Metallic</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$31,675</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
-            <dd>$3,600</dd>
-            <dt>Total of Payments</dt>
-            <dd>$12,564</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>C26558</dd>
-          </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $2,500 Customer Cash Rebate &bull; $1,500 Lease Loyalty or Conquest
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Chevrolet Equinox LT -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/equinox.jpg" alt="2026 Chevrolet Equinox LT">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-          <div class="card-price-badge">
-            <div class="amount">$349</div>
-            <div class="per-month">/mo*</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h3>2026 Chevrolet Equinox</h3>
-          <div class="trim">LT &bull; Summit White</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$35,355</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
-            <dd>$3,500</dd>
-            <dt>Total of Payments</dt>
-            <dd>$12,564</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>C26523</dd>
-          </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $1,000 Customer Cash Rebate &bull; $1,500 Lease Loyalty or Conquest
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Chevrolet Blazer EV -->
+      <!-- 2026 Chevrolet Blazer EV — LEASE -->
       <div class="special-card">
         <div class="card-image">
           <img src="images/blazer.jpg" alt="2026 Chevrolet Blazer EV">
           <span class="card-badge badge-chevy">Chevrolet</span>
           <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
             <div class="amount">$499</div>
             <div class="per-month">/mo*</div>
           </div>
@@ -1056,7 +897,7 @@
             <dd>C26582</dd>
           </dl>
           <div class="card-incentives">
-            <strong>Includes:</strong> $3,000 Customer Cash Rebate &bull; $1,000 GM Rewards Card Sign &amp; Save &bull; GM Lease Loyalty or Conquest
+            <strong>Includes:</strong> $3,000 Rebate &bull; $1,000 Lease Loyalty or Conquest &bull; $500 GM Rewards Card Sign-Up Save
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1065,35 +906,196 @@
         </div>
       </div>
 
-      <!-- 2026 Chevrolet Silverado 1500 LT Trail Boss -->
+      <!-- 2026 Chevrolet Silverado 1500 — LEASE + PURCHASE -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/silverado.jpg" alt="2026 Chevrolet Silverado 1500 LT Trail Boss">
+          <img src="images/silverado.jpg" alt="2026 Chevrolet Silverado 1500">
           <span class="card-badge badge-chevy">Chevrolet</span>
           <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
             <div class="amount">$599</div>
             <div class="per-month">/mo*</div>
           </div>
         </div>
         <div class="card-body">
           <h3>2026 Chevrolet Silverado 1500</h3>
-          <div class="trim">LT Trail Boss &bull; Sterling Gray Metallic</div>
+          <div class="trim">Crew Cab &bull; Black</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$64,800</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
             <dt>Due at Signing*</dt>
-            <dd>$3,700</dd>
+            <dd>$3,000</dd>
             <dt>Total of Payments</dt>
             <dd>$21,564</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
-            <dd>C26657</dd>
+            <dd>C26660</dd>
           </dl>
           <div class="card-incentives">
-            <strong>Includes:</strong> $4,500 Customer Cash Rebate &bull; $2,500 Chevrolet Lease Loyalty
+            <strong>Includes:</strong> $2,500 Chevrolet Lease Loyalty &bull; $500 My GM Rewards Sign-Up Save
+          </div>
+          <div class="card-alt-offer">
+            <strong>Or Purchase &amp; Save $11,850!</strong>
+            0% APR for 60 months or 1.9% for 72 months
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GMC (4) -->
+
+      <!-- 2026 GMC Terrain — LEASE -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/terrain.jpg" alt="2026 GMC Terrain Denali">
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
+            <div class="amount">$399</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Terrain</h3>
+          <div class="trim">Denali &bull; Volcanic Red Tintcoat</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$38,425</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing*</dt>
+            <dd>$3,300</dd>
+            <dt>Total of Payments</dt>
+            <dd>$14,364</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26539</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $2,500 Rebate &bull; $2,000 Lease Loyalty or Conquest &bull; $500 My GM Rewards Sign-Up Save
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 GMC Sierra EV — LEASE -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/sierra-ev.jpg" alt="2026 GMC Sierra EV">
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
+            <div class="amount">$559</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Sierra EV</h3>
+          <div class="trim">Crew Cab &bull; Dark Ember Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$66,575</dd>
+            <dt>Discount</dt>
+            <dd>$10,651</dd>
+            <dt>Selling Price</dt>
+            <dd>$55,924</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing*</dt>
+            <dd>$3,500</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26606</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $3,250 Rebate &bull; $500 My GM Rewards Sign-Up Save
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 GMC Canyon — LEASE -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/canyon.jpg" alt="2026 GMC Canyon AT4">
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
+            <div class="amount">$596</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Canyon</h3>
+          <div class="trim">AT4 &bull; Sterling Metallic</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$53,120</dd>
+            <dt>Term</dt>
+            <dd>39 Months</dd>
+            <dt>Due at Signing*</dt>
+            <dd>$1,000</dd>
+            <dt>Total of Payments</dt>
+            <dd>$23,244</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26570</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $750 Rebate &bull; $500 My GM Rewards Sign-Up Save
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 GMC Sierra 1500 — LEASE -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/sierra.jpg" alt="2026 GMC Sierra 1500">
+          <span class="card-badge badge-gmc">GMC</span>
+          <div class="card-price-badge">
+            <span class="deal-label">Lease</span>
+            <div class="amount">$599</div>
+            <div class="per-month">/mo*</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Sierra 1500</h3>
+          <div class="trim">Crew Cab &bull; Summit White</div>
+          <dl class="card-details">
+            <dt>MSRP</dt>
+            <dd>$60,150</dd>
+            <dt>Term</dt>
+            <dd>36 Months</dd>
+            <dt>Due at Signing*</dt>
+            <dd>$1,000</dd>
+            <dt>Total of Payments</dt>
+            <dd>$21,564</dd>
+            <dt>Mileage</dt>
+            <dd>10,000/yr</dd>
+            <dt>Stock #</dt>
+            <dd>G26525</dd>
+          </dl>
+          <div class="card-incentives">
+            <strong>Includes:</strong> $3,750 Rebate &bull; $1,500 Lease Loyalty or Conquest &bull; $500 My GM Rewards Sign-Up Save &bull; GMC Truck Month Bonus
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1142,8 +1144,10 @@
   <!-- ============ DISCLAIMER ============ -->
   <section class="disclaimer">
     <div class="container">
-      <p>*All lease offers are based on approved above-average credit through GM Financial (Chevrolet/GMC) or Chrysler Capital (Jeep). Monthly payments shown include applicable Pennsylvania sales tax but do not include title, license, or dealer fees. Amount due at signing includes first month's payment, acquisition fee, and down payment (where applicable); title, license, and dealer fees are additional. No security deposit required. All leases are 36 months at 10,000 miles per year. Lessee is responsible for excess mileage at $0.25/mile and excessive wear and use charges at lease end. Lessee has the option to purchase the vehicle at lease end at a price to be determined at lease signing. Not all lessees will qualify for the lowest payment. Customer Cash Rebates (CCR) are included in the advertised payments where noted. Lease Loyalty incentive requires a current GM or Stellantis lease (as applicable). Lease Conquest incentive requires a current competitive brand lease. Customers who do not qualify for loyalty or conquest incentives will have a higher monthly payment. Offers apply only to the specific stock numbers shown and are subject to prior sale. Prices and payments may vary based on vehicle availability. Photos are for illustration purposes only and may not reflect the exact vehicle. See dealer for complete details. Offers expire 05/31/2026.</p>
-      <p style="margin-top: 12px;">**2026 Chevrolet Blazer EV (Stock #C26582): Total of Payments is $17,964 ($499/mo &times; 36 months), exclusive of the $1,000 due at signing. PA sales tax and dealer fees are included in this offer; title and license are additional. This vehicle has approximately 2,500 miles already on the odometer at lease signing. The 36-month lease allowance is 30,000 total miles (10,000/yr); after accounting for existing mileage, the effective remaining allowance is approximately 9,100 miles per year. Excess mileage charges of $0.25/mile apply at lease end per the standard terms above.</p>
+      <p>*All lease offers are based on approved above-average credit through GM Financial. Monthly payments shown include applicable Pennsylvania sales tax but do not include title, license, or dealer fees. Amount due at signing includes first month's payment, acquisition fee, and down payment (where applicable); title, license, and dealer fees are additional. No security deposit required. All leases are at 10,000 miles per year unless otherwise noted. The GMC Canyon (Stock #G26570) lease is 39 months; all other leases are 36 months. Lessee is responsible for excess mileage at $0.25/mile and excessive wear and use charges at lease end. Lessee has the option to purchase the vehicle at lease end at a price to be determined at lease signing. Not all lessees will qualify for the lowest payment. Customer Cash Rebates (CCR) are included in the advertised payments where noted. Lease Loyalty incentive requires a current GM lease. Lease Conquest incentive requires a current competitive brand lease. Customers who do not qualify for loyalty or conquest incentives will have a higher monthly payment. My GM Rewards Card Sign-Up Save requires new enrollment in the My GM Rewards Card program. Offers apply only to the specific stock numbers shown and are subject to prior sale. Prices and payments may vary based on vehicle availability. Photos are for illustration purposes only and may not reflect the exact vehicle. Several vehicles shown are Courtesy Transportation Program (CTP) vehicles with existing mileage as noted on the deal sheets. See dealer for complete details. Offers expire 06/30/2026.</p>
+      <p style="margin-top: 12px;">&dagger;2026 Chevrolet Trax (Stock #C26630): Finance offer based on approved credit through GM Financial at 5.9% APR for 84 months with $1,000 due at signing. Monthly payment of $363 includes applicable Pennsylvania sales tax. Title, license, and dealer fees are additional. This is a Courtesy Transportation Program (CTP) vehicle with approximately 2,305 miles on the odometer. Selling price of $25,063 includes $1,250 rebate, $750 bonus cash, and $500 My GM Rewards Card Sign-Up Save. Not all buyers will qualify. See dealer for complete details.</p>
+      <p style="margin-top: 12px;">**2026 Chevrolet Blazer EV (Stock #C26582): Total of Payments is $17,964 ($499/mo &times; 36 months), exclusive of the $1,000 due at signing. PA sales tax and dealer fees are included in this offer; title and license are additional. This vehicle has approximately 2,273 miles on the odometer at lease signing. The 36-month lease allowance is 30,000 total miles (10,000/yr); after accounting for existing mileage, the effective remaining allowance is approximately 9,200 miles per year. Excess mileage charges of $0.25/mile apply at lease end per the standard terms above.</p>
+      <p style="margin-top: 12px;">2026 Chevrolet Silverado 1500 (Stock #C26660) Purchase Option: 0% APR for 60 months or 1.9% APR for 72 months available on approved credit through GM Financial. Total savings of up to $11,850 include: $4,350 Bob Weaver Discount, $4,250 Consumer Cash, $1,000 Trade Assist (requires trade-in of 2012 model year or newer vehicle), $1,750 Bonus Cash, and $500 My GM Rewards Card Sign-Up Save. Not all buyers will qualify for all incentives. See dealer for complete details.</p>
     </div>
   </section>
 
