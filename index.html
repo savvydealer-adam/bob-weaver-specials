@@ -483,34 +483,33 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-    .card-price-badge {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+    .card-price-bar {
       background: var(--americana-orange);
       color: #fff;
       font-family: var(--font-heading);
-      padding: 12px 20px;
-      border-radius: 8px 0 0 0;
-      box-shadow: -2px -2px 12px rgba(0,0,0,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
     }
-    .card-price-badge .deal-label {
-      display: block;
-      font-size: 0.6rem;
+    .card-price-bar .deal-label {
+      font-size: 0.65rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin-bottom: 2px;
+      opacity: 0.9;
     }
-    .card-price-badge .amount {
-      font-size: 2.2rem;
+    .card-price-bar .amount {
+      font-size: 2rem;
       font-weight: 900;
       line-height: 1;
-      text-shadow: 0 2px 4px rgba(0,0,0,.2);
     }
-    .card-price-badge .per-month {
-      font-size: 0.75rem;
+    .card-price-bar .per-month {
+      font-size: 0.8rem;
       font-weight: 700;
+      align-self: flex-end;
+      margin-bottom: 2px;
     }
     .card-body {
       padding: 20px;
@@ -823,11 +822,11 @@
           <img src="images/trax.jpg" alt="2026 Chevrolet Trax">
           <span class="card-badge badge-chevy">Chevrolet</span>
           <span class="badge-ctp">CTP &bull; 2,305 mi</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Finance</span>
-            <div class="amount">$363</div>
-            <div class="per-month">/mo&dagger;</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Finance</span>
+          <span class="amount">$363</span>
+          <span class="per-month">/mo&dagger;</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-trax-kl77lhep0tc073508" target="_parent">2026 Chevrolet Trax</a></h3>
@@ -862,11 +861,11 @@
           <img src="images/equinox.jpg" alt="2026 Chevrolet Equinox">
           <span class="card-badge badge-chevy">Chevrolet</span>
           <span class="badge-ctp">CTP &bull; 2,100 mi</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$399</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$399</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-equinox-3gnaxpeg5tl327992" target="_parent">2026 Chevrolet Equinox</a></h3>
@@ -900,11 +899,11 @@
         <div class="card-image">
           <img src="images/blazer.jpg" alt="2026 Chevrolet Blazer EV">
           <span class="card-badge badge-chevy">Chevrolet</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$499</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$499</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-blazer-ev-3gnkdgrj0ts130866" target="_parent">2026 Chevrolet Blazer EV</a></h3>
@@ -940,11 +939,11 @@
         <div class="card-image">
           <img src="images/silverado.jpg" alt="2026 Chevrolet Silverado 1500">
           <span class="card-badge badge-chevy">Chevrolet</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$599</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$599</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-silverado-1500-1gcukded4tz372701" target="_parent">2026 Chevrolet Silverado 1500</a></h3>
@@ -985,11 +984,11 @@
           <img src="images/terrain.jpg" alt="2026 GMC Terrain Denali">
           <span class="card-badge badge-gmc">GMC</span>
           <span class="badge-ctp">CTP &bull; 2,100 mi</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$399</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$399</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-terrain-3gkalueg3tl284180" target="_parent">2026 GMC Terrain</a></h3>
@@ -1024,11 +1023,11 @@
           <img src="images/sierra-ev.jpg" alt="2026 GMC Sierra EV">
           <span class="card-badge badge-gmc">GMC</span>
           <span class="badge-ctp">CTP &bull; 2,100 mi</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$559</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$559</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-ev-1gt1eseh7tu413112" target="_parent">2026 GMC Sierra EV</a></h3>
@@ -1064,11 +1063,11 @@
         <div class="card-image">
           <img src="images/canyon.jpg" alt="2026 GMC Canyon AT4">
           <span class="card-badge badge-gmc">GMC</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$596</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$596</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-canyon-1gtp2bek1t1159221" target="_parent">2026 GMC Canyon</a></h3>
@@ -1103,11 +1102,11 @@
           <img src="images/sierra.jpg" alt="2026 GMC Sierra 1500">
           <span class="card-badge badge-gmc">GMC</span>
           <span class="badge-ctp">CTP &bull; 3,700 mi</span>
-          <div class="card-price-badge">
-            <span class="deal-label">Lease</span>
-            <div class="amount">$599</div>
-            <div class="per-month">/mo*</div>
-          </div>
+        </div>
+        <div class="card-price-bar">
+          <span class="deal-label">Lease</span>
+          <span class="amount">$599</span>
+          <span class="per-month">/mo*</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-1500-3gtpucek4tg107230" target="_parent">2026 GMC Sierra 1500</a></h3>
