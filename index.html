@@ -472,44 +472,88 @@
     .badge-ctp {
       position: absolute;
       top: 12px;
-      right: 12px;
-      background: rgba(0,0,0,.7);
+      left: 12px;
+      background: #00838f;
       color: #fff;
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 0.6rem;
-      padding: 3px 8px;
+      font-size: 0.65rem;
+      padding: 5px 10px;
       border-radius: 3px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      z-index: 2;
     }
-    .card-price-bar {
+    .card-deal-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
       background: var(--americana-orange);
       color: #fff;
       font-family: var(--font-heading);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 16px;
-    }
-    .card-price-bar .deal-label {
-      font-size: 0.65rem;
       font-weight: 700;
+      font-size: 0.7rem;
+      padding: 4px 12px;
+      border-radius: 3px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      opacity: 0.9;
+      z-index: 2;
     }
-    .card-price-bar .amount {
-      font-size: 2rem;
-      font-weight: 900;
-      line-height: 1;
+    .card-pricing {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      gap: 12px;
     }
-    .card-price-bar .per-month {
-      font-size: 0.8rem;
+    .card-pricing-everyone {
+      border-left: 4px solid var(--americana-orange);
+      background: #fff8f5;
+    }
+    .card-pricing-conditional {
+      border-left: 4px solid var(--loyal-navy);
+      background: #f5f4f8;
+    }
+    .card-pricing .price-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .card-pricing .price-label {
+      font-family: var(--font-heading);
       font-weight: 700;
-      align-self: flex-end;
-      margin-bottom: 2px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--loyal-navy);
+    }
+    .card-pricing .price-sublabel {
+      font-size: 0.68rem;
+      color: var(--neutral-500);
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+    .card-pricing .price-amount {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.7rem;
+      color: var(--loyal-navy);
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .card-pricing .price-amount small {
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .card-pricing-everyone .price-amount {
+      color: var(--americana-orange);
+    }
+    .card-terms {
+      padding: 8px 20px;
+      font-size: 0.72rem;
+      color: var(--neutral-500);
+      line-height: 1.4;
+      border-top: 1px solid var(--neutral-200);
     }
     .card-body {
       padding: 20px;
@@ -563,17 +607,47 @@
       font-weight: 700;
       margin-bottom: 6px;
     }
-    .card-incentives {
-      background: var(--parchment);
-      border-left: 3px solid var(--americana-orange);
-      border-radius: 0 4px 4px 0;
-      padding: 10px 12px;
-      margin-bottom: 14px;
+    .card-qualify {
+      padding: 12px 20px;
+      background: #f5f4f8;
+      border-left: 4px solid var(--loyal-navy);
+    }
+    .card-qualify-header {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--loyal-navy);
+      margin-bottom: 6px;
+    }
+    .card-qualify-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.78rem;
+      color: var(--neutral-700);
+      margin-bottom: 2px;
+    }
+    .card-qualify-item .qual-amount {
+      font-weight: 700;
+      color: var(--americana-orange);
+      white-space: nowrap;
+    }
+    .card-qualify-note {
+      font-size: 0.68rem;
+      color: var(--neutral-500);
+      font-style: italic;
+      margin-top: 1px;
+    }
+    .card-qualify-result {
       font-size: 0.78rem;
       color: var(--loyal-navy);
-      line-height: 1.5;
+      font-weight: 600;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--neutral-200);
     }
-    .card-incentives strong { font-weight: 700; }
     .card-alt-offer {
       background: var(--loyal-navy);
       color: #fff;
@@ -592,6 +666,11 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--americana-orange);
+    }
+    .card-alt-offer .alt-qualify {
+      font-size: 0.7rem;
+      margin-top: 6px;
+      opacity: 0.85;
     }
     .card-footer {
       margin-top: auto;
@@ -845,36 +924,45 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/trax.jpg" alt="2026 Chevrolet Trax">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-          <span class="badge-ctp">CTP &bull; 2,305 mi</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Finance</span>
-          <span class="amount">$363</span>
-          <span class="per-month">/mo&dagger;</span>
+          <span class="badge-ctp">CTP &bull; ~2,305 mi</span>
+          <span class="card-deal-badge">Finance</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-trax-kl77lhep0tc073508" target="_parent">2026 Chevrolet Trax</a></h3>
           <div class="trim">Sport Utility &bull; Summit White</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Finance</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$371<small>/mo</small></span>
+          </div>
+          <div class="card-qualify">
+            <div class="card-qualify-header">You May Also Qualify For</div>
+            <div class="card-qualify-item">
+              <span>My GM Rewards Card Sign-Up</span>
+              <span class="qual-amount">&minus;$500</span>
+            </div>
+            <div class="card-qualify-note">(Requires new enrollment)</div>
+            <div class="card-qualify-result">Qualify and your payment drops to about $363/mo</div>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 84 mos at 5.9% APR, $1,000 due at signing.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$26,385</dd>
             <dt>Selling Price</dt>
             <dd>$25,063</dd>
-            <dt>Term</dt>
-            <dd>84 Months</dd>
             <dt>APR</dt>
             <dd>5.9%</dd>
-            <dt>Due at Signing&dagger;</dt>
+            <dt>Term</dt>
+            <dd>84 Months</dd>
+            <dt>Due at Signing</dt>
             <dd>$1,000</dd>
             <dt>Stock #</dt>
             <dd>C26630</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $1,250 Rebate &bull; $750 Bonus Cash &bull; $500 My GM Rewards Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            &dagger;Finance through GM Financial with approved credit. 5.9% APR for 84 months. $1,000 due at signing; all PA taxes and fees included in advertised payment. Courtesy Transportation Program (CTP) vehicle with approximately 2,305 miles on the odometer. Selling price of $25,063 includes $1,250 rebate, $750 bonus cash, and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Not all buyers will qualify. Stock #C26630 only.
+            Finance through GM Financial with approved credit. 5.9% APR for 84 months. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,305 miles on the odometer. Payment of $371/mo reflects selling price of $25,063 (includes $1,250 rebate and $750 bonus cash). My GM Rewards Card Sign-Up Save ($500) requires new enrollment and reduces payment to approximately $363/mo. Not all buyers will qualify. Stock #C26630 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -887,36 +975,43 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/equinox.jpg" alt="2026 Chevrolet Equinox">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-          <span class="badge-ctp">CTP &bull; 2,100 mi</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$399</span>
-          <span class="per-month">/mo*</span>
+          <span class="badge-ctp">CTP &bull; ~2,100 mi</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-equinox-3gnaxpeg5tl327992" target="_parent">2026 Chevrolet Equinox</a></h3>
           <div class="trim">Sport Utility &bull; Radiant Red Tintcoat</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$451<small>/mo</small></span>
+          </div>
+          <div class="card-pricing card-pricing-conditional">
+            <div class="price-info">
+              <span class="price-label">Current Lessees</span>
+              <span class="price-sublabel">Requires a current GM or qualifying competitive-brand lease. Not all lessees qualify.</span>
+            </div>
+            <span class="price-amount">$399<small>/mo</small></span>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$36,120</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$1,800</dd>
-            <dt>Total of Payments</dt>
+            <dt>Total from</dt>
             <dd>$14,364</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
             <dd>C26574</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $1,500 Rebate &bull; $1,000 Lease Loyalty or Conquest &bull; $500 My GM Rewards Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. $1,800 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Includes $1,500 rebate, $1,000 Lease Loyalty or Conquest, and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #C26574 only.
+            Lease through GM Financial with approved credit. $1,800 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Payment of $451/mo available to all qualified lessees. Current lessees&rsquo; payment of $399/mo requires $1,000 Lease Loyalty or Conquest and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #C26574 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -929,37 +1024,43 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/blazer.jpg" alt="2026 Chevrolet Blazer EV">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$499</span>
-          <span class="per-month">/mo*</span>
+          <span class="badge-ctp">CTP &bull; ~2,273 mi</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-blazer-ev-3gnkdgrj0ts130866" target="_parent">2026 Chevrolet Blazer EV</a></h3>
           <div class="trim">Sport Utility &bull; Sterling Gray Metallic</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$552<small>/mo</small></span>
+          </div>
+          <div class="card-pricing card-pricing-conditional">
+            <div class="price-info">
+              <span class="price-label">Current Lessees</span>
+              <span class="price-sublabel">Requires a current GM or qualifying competitive-brand lease. Not all lessees qualify.</span>
+            </div>
+            <span class="price-amount">$499<small>/mo</small></span>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$52,455</dd>
-            <dt>Discount</dt>
-            <dd>$7,656</dd>
             <dt>Selling Price</dt>
             <dd>$44,799</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$1,000</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr**</dd>
             <dt>Stock #</dt>
             <dd>C26582</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $3,000 Rebate &bull; $1,000 Lease Loyalty or Conquest &bull; $500 GM Rewards Card Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. $1,000 due at signing; all PA taxes and fees included. Total of payments: $17,964 ($499/mo &times; 36 months), exclusive of due-at-signing amount. Vehicle has approximately 2,273 miles on the odometer; effective remaining mileage allowance is approximately 9,200 miles/year after accounting for existing mileage. Includes $3,000 rebate, $1,000 Lease Loyalty or Conquest, and $500 GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #C26582 only.
+            Lease through GM Financial with approved credit. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,273 miles on the odometer. Selling price $44,799 reflects discount from MSRP. Payment of $552/mo available to all qualified lessees. Current lessees&rsquo; payment of $499/mo requires $1,000 Lease Loyalty or Conquest and $500 GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. **Effective remaining mileage allowance approximately 9,200 mi/yr after existing odometer mileage. Stock #C26582 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -972,39 +1073,45 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/silverado.jpg" alt="2026 Chevrolet Silverado 1500">
-          <span class="card-badge badge-chevy">Chevrolet</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$599</span>
-          <span class="per-month">/mo*</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-silverado-1500-1gcukded4tz372701" target="_parent">2026 Chevrolet Silverado 1500</a></h3>
           <div class="trim">Crew Cab &bull; Black</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$703<small>/mo</small></span>
+          </div>
+          <div class="card-pricing card-pricing-conditional">
+            <div class="price-info">
+              <span class="price-label">Current Lessees</span>
+              <span class="price-sublabel">Requires a current Chevrolet lease. Not all lessees qualify.</span>
+            </div>
+            <span class="price-amount">$599<small>/mo</small></span>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
+          <div class="card-alt-offer">
+            <strong>Or Purchase &amp; Save up to $10,350</strong>
+            0% APR for 60 months or 1.9% for 72 months
+            <div class="alt-qualify">May also qualify: Trade Assist &minus;$1,000 (2012+ trade-in) + GM Rewards &minus;$500 &mdash; total savings up to $11,850</div>
+          </div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$64,800</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$3,000</dd>
-            <dt>Total of Payments</dt>
-            <dd>$21,564</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
             <dd>C26660</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $2,500 Chevrolet Lease Loyalty &bull; $500 My GM Rewards Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. $3,000 due at signing; all PA taxes and fees included. Includes $2,500 Chevrolet Lease Loyalty (requires current Chevrolet lease through GM Financial or Ally) and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Purchase option: 0% APR for 60 months or 1.9% APR for 72 months on approved credit. Total purchase savings of up to $11,850 include $4,350 Bob Weaver Discount, $4,250 Consumer Cash, $1,000 Trade Assist (requires trade-in of 2012 or newer vehicle), $1,750 Bonus Cash, and $500 My GM Rewards Card Sign-Up Save. Not all buyers will qualify for all incentives. Stock #C26660 only.
-          </div>
-          <div class="card-alt-offer">
-            <strong>Or Purchase &amp; Save $11,850!</strong>
-            0% APR for 60 months or 1.9% for 72 months
+            Lease through GM Financial with approved credit. $3,000 due at signing; all PA taxes and fees included. Payment of $703/mo available to all qualified lessees. Current lessees&rsquo; payment of $599/mo requires $2,500 Chevrolet Lease Loyalty (current Chevrolet lease through GM Financial or Ally) and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Purchase option: 0% APR/60 mo or 1.9% APR/72 mo. Purchase savings of $10,350 available to all buyers ($4,350 Bob Weaver Discount + $4,250 Consumer Cash + $1,750 Bonus Cash). Additional: Trade Assist &minus;$1,000 (requires 2012+ trade-in) and GM Rewards &minus;$500 for total up to $11,850. Not all buyers will qualify. Stock #C26660 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1019,36 +1126,43 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/terrain.jpg" alt="2026 GMC Terrain Denali">
-          <span class="card-badge badge-gmc">GMC</span>
-          <span class="badge-ctp">CTP &bull; 2,100 mi</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$399</span>
-          <span class="per-month">/mo*</span>
+          <span class="badge-ctp">CTP &bull; ~2,100 mi</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-terrain-3gkalueg3tl284180" target="_parent">2026 GMC Terrain</a></h3>
           <div class="trim">Denali &bull; Volcanic Red Tintcoat</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$484<small>/mo</small></span>
+          </div>
+          <div class="card-pricing card-pricing-conditional">
+            <div class="price-info">
+              <span class="price-label">Current Lessees</span>
+              <span class="price-sublabel">Requires a current GM or qualifying competitive-brand lease. Not all lessees qualify.</span>
+            </div>
+            <span class="price-amount">$399<small>/mo</small></span>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$38,425</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$3,300</dd>
-            <dt>Total of Payments</dt>
+            <dt>Total from</dt>
             <dd>$14,364</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
             <dd>G26539</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $2,500 Rebate &bull; $2,000 Lease Loyalty or Conquest &bull; $500 My GM Rewards Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. $3,300 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Includes $2,500 rebate, $2,000 Lease Loyalty or Conquest, and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #G26539 only.
+            Lease through GM Financial with approved credit. $3,300 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Payment of $484/mo available to all qualified lessees. Current lessees&rsquo; payment of $399/mo requires $2,000 Lease Loyalty or Conquest and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #G26539 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1061,17 +1175,29 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/sierra-ev.jpg" alt="2026 GMC Sierra EV">
-          <span class="card-badge badge-gmc">GMC</span>
-          <span class="badge-ctp">CTP &bull; 2,100 mi</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$559</span>
-          <span class="per-month">/mo*</span>
+          <span class="badge-ctp">CTP &bull; ~2,100 mi</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-ev-1gt1eseh7tu413112" target="_parent">2026 GMC Sierra EV</a></h3>
           <div class="trim">Crew Cab &bull; Dark Ember Metallic</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$577<small>/mo</small></span>
+          </div>
+          <div class="card-qualify">
+            <div class="card-qualify-header">You May Also Qualify For</div>
+            <div class="card-qualify-item">
+              <span>My GM Rewards Card Sign-Up</span>
+              <span class="qual-amount">&minus;$500</span>
+            </div>
+            <div class="card-qualify-note">(Requires new enrollment)</div>
+            <div class="card-qualify-result">Qualify and your payment drops to $559/mo</div>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$66,575</dd>
@@ -1081,18 +1207,15 @@
             <dd>$55,924</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$3,500</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
             <dd>G26606</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $3,250 Rebate &bull; $500 My GM Rewards Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. $3,500 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Selling price of $55,924 reflects $10,651 discount from MSRP. Includes $3,250 rebate and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Stock #G26606 only.
+            Lease through GM Financial with approved credit. $3,500 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Selling price of $55,924 reflects $10,651 discount from MSRP. Payment of $577/mo available to all qualified lessees. My GM Rewards Card Sign-Up Save ($500) requires new enrollment and reduces payment to $559/mo. Stock #G26606 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1105,35 +1228,46 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/canyon.jpg" alt="2026 GMC Canyon AT4">
-          <span class="card-badge badge-gmc">GMC</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$596</span>
-          <span class="per-month">/mo*</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-canyon-1gtp2bek1t1159221" target="_parent">2026 GMC Canyon</a></h3>
           <div class="trim">AT4 &bull; Sterling Metallic</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$611<small>/mo</small></span>
+          </div>
+          <div class="card-qualify">
+            <div class="card-qualify-header">You May Also Qualify For</div>
+            <div class="card-qualify-item">
+              <span>My GM Rewards Card Sign-Up</span>
+              <span class="qual-amount">&minus;$500</span>
+            </div>
+            <div class="card-qualify-note">(Requires new enrollment)</div>
+            <div class="card-qualify-result">Qualify and your payment drops to $596/mo</div>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 39-mo lease, 10,000 mi/yr.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$53,120</dd>
+            <dt>Selling Price</dt>
+            <dd>$50,198</dd>
             <dt>Term</dt>
             <dd>39 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$1,000</dd>
-            <dt>Total of Payments</dt>
+            <dt>Total</dt>
             <dd>$23,244</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
             <dd>G26570</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $750 Rebate &bull; $500 My GM Rewards Sign-Up Save
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. 39-month lease term (differs from other vehicles). $1,000 due at signing; all PA taxes and fees included. Total of payments: $23,244. Includes $750 rebate and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Stock #G26570 only.
+            Lease through GM Financial with approved credit. 39-month lease term. $1,000 due at signing; all PA taxes and fees included. Payment of $611/mo available to all qualified lessees. My GM Rewards Card Sign-Up Save ($500) requires new enrollment and reduces payment to $596/mo. Stock #G26570 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1146,36 +1280,43 @@
       <div class="special-card">
         <div class="card-image">
           <img src="images/sierra.jpg" alt="2026 GMC Sierra 1500">
-          <span class="card-badge badge-gmc">GMC</span>
-          <span class="badge-ctp">CTP &bull; 3,700 mi</span>
-        </div>
-        <div class="card-price-bar">
-          <span class="deal-label">Lease</span>
-          <span class="amount">$599</span>
-          <span class="per-month">/mo*</span>
+          <span class="badge-ctp">CTP &bull; ~3,700 mi</span>
+          <span class="card-deal-badge">Lease</span>
         </div>
         <div class="card-body">
           <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-1500-3gtpucek4tg107230" target="_parent">2026 GMC Sierra 1500</a></h3>
           <div class="trim">Crew Cab &bull; Summit White</div>
+          <div class="card-pricing card-pricing-everyone">
+            <div class="price-info">
+              <span class="price-label">Lease</span>
+              <span class="price-sublabel">Available to all qualified buyers</span>
+            </div>
+            <span class="price-amount">$666<small>/mo</small></span>
+          </div>
+          <div class="card-pricing card-pricing-conditional">
+            <div class="price-info">
+              <span class="price-label">Current Lessees</span>
+              <span class="price-sublabel">Requires a current GM or qualifying competitive-brand lease. Not all lessees qualify.</span>
+            </div>
+            <span class="price-amount">$599<small>/mo</small></span>
+          </div>
+          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
           <dl class="card-details">
             <dt>MSRP</dt>
             <dd>$60,150</dd>
             <dt>Term</dt>
             <dd>36 Months</dd>
-            <dt>Due at Signing*</dt>
+            <dt>Due at Signing</dt>
             <dd>$1,000</dd>
-            <dt>Total of Payments</dt>
+            <dt>Total from</dt>
             <dd>$21,564</dd>
             <dt>Mileage</dt>
             <dd>10,000/yr</dd>
             <dt>Stock #</dt>
             <dd>G26525</dd>
           </dl>
-          <div class="card-incentives">
-            <strong>Includes:</strong> $3,750 Rebate &bull; $1,500 Lease Loyalty or Conquest &bull; $500 My GM Rewards Sign-Up Save &bull; GMC Truck Month Bonus
-          </div>
           <div class="card-disclaimer">
-            *Lease through GM Financial with approved credit. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 3,700 miles on the odometer. Includes $3,750 rebate, $1,500 Lease Loyalty or Conquest, $500 My GM Rewards Card Sign-Up Save (requires new enrollment), and GMC Truck Month Bonus. Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Truck Month Bonus subject to availability and may be withdrawn without notice. Stock #G26525 only.
+            Lease through GM Financial with approved credit. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 3,700 miles on the odometer. Payment of $666/mo available to all qualified lessees. Current lessees&rsquo; payment of $599/mo requires $1,500 Lease Loyalty or Conquest and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Includes GMC Truck Month Bonus (subject to availability). Stock #G26525 only.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
@@ -1225,6 +1366,13 @@
   <section class="disclaimer">
     <div class="container">
 
+      <h3>Pricing Structure</h3>
+      <ul>
+        <li>Each vehicle displays two pricing tiers. The headline &ldquo;everyone&rdquo; payment is available to all qualified buyers with approved credit through GM Financial. No loyalty, conquest, or rewards-card enrollment is required for the headline price.</li>
+        <li>Where shown, &ldquo;Current Lessees&rdquo; pricing requires specific loyalty or conquest eligibility as described on each vehicle card. Not all buyers will qualify for the lower conditional payment.</li>
+        <li>&ldquo;You May Also Qualify For&rdquo; items (such as My GM Rewards Card Sign-Up Save) require additional enrollment or actions and are not included in the headline payment.</li>
+      </ul>
+
       <h3>Lease Terms &amp; Payments</h3>
       <ul>
         <li>All advertised lease offers are based on closed-end leases through GM Financial with approved above-average credit (typically Tier 1 or Tier 2).</li>
@@ -1236,8 +1384,8 @@
 
       <h3>Finance Terms</h3>
       <ul>
-        <li>&dagger;The 2026 Chevrolet Trax (Stock #C26630) is a finance offer, not a lease. Finance terms: 5.9% APR for 84 months through GM Financial with approved credit and $1,000 due at signing. All PA taxes and fees are included in the advertised payment.</li>
-        <li>Selling price of $25,063 includes $1,250 rebate, $750 bonus cash, and $500 My GM Rewards Card Sign-Up Save. Not all buyers will qualify for the advertised rate or terms.</li>
+        <li>The 2026 Chevrolet Trax (Stock #C26630) is a finance offer, not a lease. Finance terms: 5.9% APR for 84 months through GM Financial with approved credit and $1,000 due at signing. All PA taxes and fees are included in the advertised payment.</li>
+        <li>Headline payment of $371/mo reflects selling price of $25,063 (includes $1,250 rebate and $750 bonus cash). My GM Rewards Card Sign-Up Save ($500) requires new enrollment and is not included in the headline payment.</li>
         <li>Monthly payment and APR may vary based on individual creditworthiness and lender approval.</li>
       </ul>
 
@@ -1275,10 +1423,9 @@
       <h3>Incentives &amp; Rebates</h3>
       <ul>
         <li>Customer Cash Rebates included in advertised payments where noted are manufacturer incentives and are subject to change or cancellation by the manufacturer without notice.</li>
-        <li><strong>GM Lease Loyalty:</strong> Requires lessee to have a current GM lease through GM Financial or Ally. Proof of current lease contract required at time of signing. Specific brand loyalty (e.g., Chevrolet Lease Loyalty) may require a current lease of that specific brand.</li>
-        <li><strong>Lease Conquest:</strong> Requires lessee to have a current lease of a competitive (non-GM) brand vehicle. Proof of current competitive brand lease required at time of signing.</li>
-        <li>Customers who do not qualify for loyalty or conquest incentives will have a higher monthly payment than advertised. Contact dealer for adjusted payment without loyalty/conquest.</li>
-        <li><strong>My GM Rewards Card Sign-Up Save ($500):</strong> Requires new enrollment in the My GM Rewards Card program. Subject to credit approval for the rewards card. See dealer or gmrewardscard.com for complete terms and conditions.</li>
+        <li><strong>GM Lease Loyalty:</strong> Requires lessee to have a current GM lease through GM Financial or Ally. Proof of current lease contract required at time of signing. Specific brand loyalty (e.g., Chevrolet Lease Loyalty) may require a current lease of that specific brand. Loyalty incentives are not included in the headline &ldquo;everyone&rdquo; payment and are reflected only in the &ldquo;Current Lessees&rdquo; tier.</li>
+        <li><strong>Lease Conquest:</strong> Requires lessee to have a current lease of a competitive (non-GM) brand vehicle. Proof of current competitive brand lease required at time of signing. Conquest incentives are not included in the headline &ldquo;everyone&rdquo; payment.</li>
+        <li><strong>My GM Rewards Card Sign-Up Save ($500):</strong> Requires new enrollment in the My GM Rewards Card program. Subject to credit approval for the rewards card. This incentive is not included in the headline &ldquo;everyone&rdquo; payment and is shown separately under &ldquo;You May Also Qualify For&rdquo; or included in the &ldquo;Current Lessees&rdquo; tier where applicable. See dealer or gmrewardscard.com for complete terms and conditions.</li>
         <li><strong>GMC Truck Month Bonus:</strong> Available on qualifying GMC trucks during the promotional period. Subject to availability and may be withdrawn by the manufacturer without notice.</li>
         <li>Incentives and rebates may not be combined with certain other manufacturer or dealer offers. See dealer for offer compatibility.</li>
       </ul>
