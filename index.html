@@ -155,7 +155,7 @@
     /* ============================================
        CONTAINER
        ============================================ */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .container { max-width: 1600px; margin: 0 auto; padding: 0 20px; }
 
     /* ============================================
        HERO BANNER
@@ -399,9 +399,9 @@
     }
     .specials-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
-      max-width: 1200px;
+      max-width: 1600px;
       margin: 0 auto;
       padding: 0 20px;
       position: relative;
@@ -885,6 +885,9 @@
     /* ============================================
        RESPONSIVE
        ============================================ */
+    @media (max-width: 1200px) {
+      .specials-grid { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 992px) {
       .specials-grid { grid-template-columns: repeat(2, 1fr); }
       .promo-grid { grid-template-columns: repeat(2, 1fr); }
