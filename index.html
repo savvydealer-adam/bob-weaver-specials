@@ -124,6 +124,8 @@
     }
     .brand-chevy { background: var(--loyal-navy); color: #fff; }
     .brand-gmc { background: var(--americana-orange); color: #fff; }
+    .brand-jeep { background: #2e7d32; color: #fff; }
+    .brand-ram { background: #1a1a1a; color: #fff; }
 
     .nav { display: flex; align-items: center; gap: 24px; }
     .nav a {
@@ -228,32 +230,15 @@
        ANNOUNCEMENT BAR
        ============================================ */
     .announcement-bar {
-      background: var(--loyal-navy);
+      background: var(--americana-orange);
       color: var(--neutral-0);
       text-align: center;
-      padding: 16px 20px;
+      padding: 14px 20px;
       font-family: var(--font-heading);
-      position: relative;
-      overflow: hidden;
-    }
-    .announcement-bar::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('images/industrial-adhesive.png') repeat center / 600px;
-      opacity: 0.45;
-      mix-blend-mode: soft-light;
-      pointer-events: none;
-    }
-    .announcement-bar h2 {
-      font-size: 1.4rem;
       font-weight: 700;
+      font-size: 1.1rem;
       text-transform: uppercase;
       letter-spacing: 3px;
-    }
-    .announcement-bar h2 em {
-      font-style: normal;
-      color: var(--americana-orange);
     }
 
     /* ============================================
@@ -297,64 +282,6 @@
     .btn-outline:hover { background: var(--loyal-navy); color: #fff; }
 
     /* ============================================
-       SECTION BANNER
-       ============================================ */
-    .section-banner {
-      background: linear-gradient(90deg, var(--loyal-navy), #2a1d5e);
-      text-align: center;
-      padding: 24px 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    .section-banner::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('images/industrial-adhesive.png') repeat center / 600px;
-      opacity: 0.45;
-      mix-blend-mode: soft-light;
-      pointer-events: none;
-    }
-    .section-banner h2 {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--neutral-0);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-    .section-banner h2 em {
-      font-style: normal;
-      color: var(--americana-orange);
-    }
-
-    /* ============================================
-       TRADE-IN BANNER
-       ============================================ */
-    .trade-banner {
-      background: var(--parchment);
-      color: var(--loyal-navy);
-      text-align: center;
-      padding: 28px 20px;
-      border-top: 4px solid var(--americana-orange);
-    }
-    .trade-banner h3 {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 6px;
-    }
-    .trade-banner p { font-size: 0.95rem; margin-bottom: 14px; }
-    .trade-banner .btn {
-      background: var(--americana-orange);
-      color: #fff;
-      border: 2px solid var(--americana-orange);
-    }
-    .trade-banner .btn:hover { background: #b83800; border-color: #b83800; }
-
-    /* ============================================
        SPECIALS GRID
        ============================================ */
     .specials-section {
@@ -371,37 +298,11 @@
       mix-blend-mode: multiply;
       pointer-events: none;
     }
-    .specials-section .section-label {
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .specials-section .section-label span {
-      display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.75rem;
-      padding: 4px 14px;
-      border-radius: 3px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-    .brand-section-title {
-      text-align: center;
-      font-family: var(--font-heading);
-      font-weight: 900;
-      font-size: 1.8rem;
-      color: var(--primary-dark);
-      margin-bottom: 30px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
     .specials-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      max-width: 1600px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
       position: relative;
@@ -420,6 +321,7 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      border-top: 4px solid var(--americana-orange);
     }
     .special-card:hover {
       transform: translateY(-4px);
@@ -427,33 +329,16 @@
     }
     .card-image {
       position: relative;
-      height: 200px;
+      height: 220px;
       overflow: hidden;
+      background: #f0f0f0;
     }
     .card-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-    }
-    /* Vehicle image placeholder gradient */
-    .card-image-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: rgba(255,255,255,0.5);
-    }
-    .card-image-placeholder.chevy-bg {
-      background: linear-gradient(135deg, var(--loyal-navy) 0%, #2a1d5e 50%, #3d2d7a 100%);
-    }
-    .card-image-placeholder.gmc-bg {
-      background: linear-gradient(135deg, #1a1a1a 0%, #3a1a0a 50%, var(--americana-orange) 100%);
+      object-fit: contain;
+      object-position: center;
+      padding: 8px;
     }
     .card-badge {
       position: absolute;
@@ -466,97 +351,38 @@
       border-radius: 3px;
       text-transform: uppercase;
       letter-spacing: 1px;
-    }
-    .badge-chevy { background: var(--loyal-navy); color: #fff; }
-    .badge-gmc { background: var(--americana-orange); color: #fff; }
-    .badge-ctp {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #00838f;
+      background: var(--loyal-navy);
       color: #fff;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.65rem;
-      padding: 5px 10px;
-      border-radius: 3px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      z-index: 2;
     }
-    .card-deal-badge {
+    .card-discount-badge {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      bottom: 0;
+      right: 0;
       background: var(--americana-orange);
       color: #fff;
       font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.7rem;
-      padding: 4px 12px;
-      border-radius: 3px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      z-index: 2;
+      padding: 10px 18px;
+      border-radius: 8px 0 0 0;
+      text-align: center;
     }
-    .card-pricing {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 20px;
-      gap: 12px;
-    }
-    .card-pricing-conditional {
-      border-left: 4px solid var(--americana-orange);
-      background: #fff8f5;
-    }
-    .card-pricing-everyone {
-      border-left: 4px solid var(--loyal-navy);
-      background: #f5f4f8;
-    }
-    .card-pricing .price-info {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-    .card-pricing .price-label {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--loyal-navy);
-    }
-    .card-pricing .price-sublabel {
-      font-size: 0.68rem;
-      color: var(--neutral-500);
-      line-height: 1.3;
-      margin-top: 2px;
-    }
-    .card-pricing .price-amount {
-      font-family: var(--font-heading);
+    .card-discount-badge .percent {
+      font-size: 2.2rem;
       font-weight: 900;
-      font-size: 1.7rem;
-      color: var(--loyal-navy);
       line-height: 1;
-      white-space: nowrap;
     }
-    .card-pricing .price-amount small {
+    .card-discount-badge .off-label {
       font-size: 0.7rem;
-      font-weight: 600;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
     }
-    .card-pricing-conditional .price-amount {
-      color: var(--americana-orange);
-    }
-    .card-terms {
-      padding: 8px 20px;
-      font-size: 0.72rem;
-      color: var(--neutral-500);
-      line-height: 1.4;
-      border-top: 1px solid var(--neutral-200);
-    }
+
+    /* ============================================
+       CARD BODY & PRICING
+       ============================================ */
     .card-body {
-      padding: 20px;
+      padding: 22px 20px 20px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -564,113 +390,96 @@
     .card-body h3 {
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.35rem;
       color: var(--loyal-navy);
-      margin-bottom: 2px;
+      margin-bottom: 3px;
       line-height: 1.2;
       text-transform: uppercase;
       letter-spacing: 1px;
-    }
-    .card-body h3 a {
-      color: inherit;
-      text-decoration: none;
-    }
-    .card-body h3 a::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      z-index: 1;
     }
     .card-body .trim {
       font-family: var(--font-body);
       font-weight: 500;
       font-size: 0.82rem;
       color: var(--neutral-500);
-      margin-bottom: 10px;
-    }
-    .card-details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 12px;
-      font-size: 0.8rem;
-      color: var(--neutral-700);
       margin-bottom: 14px;
     }
-    .card-details dt {
-      font-weight: 600;
-      color: var(--neutral-500);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+
+    .card-pricing {
+      background: var(--parchment);
+      border-left: 3px solid var(--americana-orange);
+      border-radius: 0 6px 6px 0;
+      padding: 14px 16px;
+      margin-bottom: 16px;
     }
-    .card-details dd {
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .card-qualify {
-      padding: 12px 20px;
-      background: #f5f4f8;
-      border-left: 4px solid var(--loyal-navy);
-    }
-    .card-qualify-header {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--loyal-navy);
-      margin-bottom: 6px;
-    }
-    .card-qualify-item {
+    .price-row {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      font-size: 0.78rem;
-      color: var(--neutral-700);
-      margin-bottom: 2px;
+      align-items: center;
+      margin-bottom: 6px;
     }
-    .card-qualify-item .qual-amount {
-      font-weight: 700;
-      color: var(--americana-orange);
-      white-space: nowrap;
-    }
-    .card-qualify-note {
-      font-size: 0.68rem;
-      color: var(--neutral-500);
-      font-style: italic;
-      margin-top: 1px;
-    }
-    .card-qualify-result {
-      font-size: 0.78rem;
-      color: var(--loyal-navy);
-      font-weight: 600;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid var(--neutral-200);
-    }
-    .card-alt-offer {
-      background: var(--loyal-navy);
-      color: #fff;
-      border-radius: 4px;
-      padding: 12px 14px;
-      margin-bottom: 14px;
-      font-size: 0.78rem;
-      text-align: center;
-      line-height: 1.5;
-    }
-    .card-alt-offer strong {
-      display: block;
+    .price-row:last-child { margin-bottom: 0; }
+    .price-row .label {
       font-family: var(--font-heading);
-      font-size: 1rem;
-      font-weight: 900;
+      font-weight: 600;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      color: var(--neutral-500);
+    }
+    .price-row .value {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--loyal-navy);
+    }
+    .price-row .value.msrp-strike {
+      text-decoration: line-through;
+      color: var(--neutral-500);
+      font-weight: 500;
+    }
+    .price-row .value.sale-price {
+      font-size: 1.3rem;
+      font-weight: 900;
       color: var(--americana-orange);
     }
-    .card-alt-offer .alt-qualify {
-      font-size: 0.7rem;
-      margin-top: 6px;
-      opacity: 0.85;
+    .price-row .value.savings {
+      color: #2e7d32;
+      font-weight: 800;
+    }
+    .price-divider {
+      height: 1px;
+      background: var(--neutral-200);
+      margin: 8px 0;
+    }
+
+    .card-features {
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      color: var(--neutral-700);
+      line-height: 1.7;
+    }
+    .card-features li {
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 3px;
+    }
+    .card-features li::before {
+      content: '\2605';
+      position: absolute;
+      left: 0;
+      color: var(--americana-orange);
+      font-size: 0.65rem;
+      top: 2px;
+    }
+
+    .card-disclaimer {
+      font-size: 0.68rem;
+      color: var(--neutral-500);
+      line-height: 1.5;
+      margin-top: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--neutral-200);
     }
     .card-footer {
       margin-top: auto;
@@ -684,35 +493,6 @@
       text-align: center;
       font-size: 0.75rem;
       padding: 10px 12px;
-    }
-
-    /* ============================================
-       DIVIDER
-       ============================================ */
-    .brand-divider {
-      text-align: center;
-      padding: 30px 20px 10px;
-      position: relative;
-      z-index: 1;
-    }
-    .brand-divider h3 {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: var(--loyal-navy);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-    .brand-divider h3::before,
-    .brand-divider h3::after {
-      content: '';
-      height: 3px;
-      width: 60px;
-      background: var(--americana-orange);
     }
 
     /* ============================================
@@ -778,59 +558,6 @@
     .promo-card p { font-size: 0.85rem; color: var(--neutral-500); margin-bottom: 0; }
 
     /* ============================================
-       CONTACT / CTA SECTION
-       ============================================ */
-    .contact-section {
-      background: linear-gradient(135deg, var(--loyal-navy), #2a1d5e);
-      color: var(--neutral-0);
-      padding: 50px 20px;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .contact-info h2 {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
-    .contact-info .detail {
-      margin-bottom: 14px;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .contact-info .detail strong {
-      display: block;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 2px;
-      opacity: 0.7;
-    }
-    .hours-table {
-      width: 100%;
-      font-size: 0.9rem;
-    }
-    .hours-table h3 {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 14px;
-    }
-    .hours-table table { width: 100%; border-collapse: collapse; }
-    .hours-table td {
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .hours-table td:last-child { text-align: right; }
-
-    /* ============================================
        DISCLAIMER
        ============================================ */
     .disclaimer {
@@ -859,14 +586,6 @@
       margin-bottom: 12px;
     }
     .disclaimer ul li { margin-bottom: 4px; }
-    .card-disclaimer {
-      font-size: 0.68rem;
-      color: var(--neutral-500);
-      line-height: 1.5;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid var(--neutral-200);
-    }
 
     /* ============================================
        FOOTER
@@ -885,9 +604,6 @@
     /* ============================================
        RESPONSIVE
        ============================================ */
-    @media (max-width: 1200px) {
-      .specials-grid { grid-template-columns: repeat(3, 1fr); }
-    }
     @media (max-width: 992px) {
       .specials-grid { grid-template-columns: repeat(2, 1fr); }
       .promo-grid { grid-template-columns: repeat(2, 1fr); }
@@ -900,7 +616,6 @@
       .specials-grid { grid-template-columns: 1fr; max-width: 480px; }
       .hero { padding: 40px 20px; }
       .hero h1 { font-size: 2rem; }
-      .contact-grid { grid-template-columns: 1fr; }
       .promo-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
     }
   </style>
@@ -910,544 +625,162 @@
   <!-- ============ HERO BANNER ============ -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-tag">Limited Time Offers</div>
-      <h1>June <em>Specials</em></h1>
-      <p>Exceptional lease and finance deals on new Chevrolet, GMC, and Jeep vehicles. Low monthly payments, competitive down payments, and no games &mdash; just honest pricing from your neighbors at Bob Weaver.</p>
+      <div class="hero-tag">July 4th Sales Event</div>
+      <h1>Ram 1500 <em>Blowout</em></h1>
+      <p>Celebrate Independence Day with unbeatable savings on new 2026 Ram 1500 trucks. Big Horn, Laramie, and Tradesman &mdash; all priced to move this holiday weekend at Bob Weaver Auto.</p>
+      <a href="#specials" class="hero-cta">View Offers Below</a>
     </div>
   </section>
 
-  <!-- ============ SPECIALS ============ -->
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="announcement-bar">
+    &#9733; &nbsp; Up to 12% Off MSRP &mdash; All Offers Expire 07/06/2026 &nbsp; &#9733;
+  </div>
+
+  <!-- ============ VEHICLE SPECIALS ============ -->
   <section class="specials-section" id="specials">
 
     <div class="specials-grid">
 
-      <!-- CHEVROLET (4) -->
-
-      <!-- 2026 Chevrolet Trax — FINANCE -->
+      <!-- RAM 1500 BIG HORN — Stock #R26563 -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/trax.jpg" alt="2026 Chevrolet Trax">
-          <span class="badge-ctp">CTP &bull; ~2,305 mi</span>
-          <span class="card-deal-badge">Finance</span>
+          <img src="../Downloads/BobWeaver_R26563 bg.png" alt="2026 Ram 1500 Big Horn — Molten Red Pearlcoat">
+          <span class="card-badge">Ram</span>
+          <div class="card-discount-badge">
+            <div class="percent">12%</div>
+            <div class="off-label">Off MSRP</div>
+          </div>
         </div>
         <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-trax-kl77lhep0tc073508" target="_parent">2026 Chevrolet Trax</a></h3>
-          <div class="trim">Sport Utility &bull; Summit White</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">With GM Rewards Card</span>
-              <span class="price-sublabel">Requires new enrollment in GM Rewards Card program</span>
+          <h3>2026 Ram 1500</h3>
+          <div class="trim">Big Horn Crew Cab 4x4 5'7 Box &bull; Molten Red Pearlcoat &bull; Stock #R26563</div>
+
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$57,865</span>
             </div>
-            <span class="price-amount">$363<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No special enrollment required</span>
+            <div class="price-row">
+              <span class="label">You Save</span>
+              <span class="value savings">&minus;$6,944</span>
             </div>
-            <span class="price-amount">$371<small>/mo</small></span>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$50,921*</span>
+            </div>
           </div>
-          <div class="card-terms">With approved credit through GM Financial. 84 mos at 5.9% APR, $1,000 due at signing.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$26,385</dd>
-            <dt>Selling Price</dt>
-            <dd>$25,063</dd>
-            <dt>APR</dt>
-            <dd>5.9%</dd>
-            <dt>Term</dt>
-            <dd>84 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$1,000</dd>
-            <dt>Stock #</dt>
-            <dd>C26630</dd>
-          </dl>
+
+          <ul class="card-features">
+            <li>3.0L Hurricane Twin Turbo I6 engine</li>
+            <li>8-speed automatic transmission</li>
+            <li>4x4 drivetrain</li>
+            <li>18 city / 24 highway MPG</li>
+          </ul>
+
           <div class="card-disclaimer">
-            Finance through GM Financial with approved credit. 5.9% APR for 84 months. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,305 miles on the odometer. Payment of $371/mo reflects selling price of $25,063 (includes $1,250 rebate and $750 bonus cash). My GM Rewards Card Sign-Up Save ($500) requires new enrollment and reduces payment to approximately $363/mo. Not all buyers will qualify. Stock #C26630 only.
+            *Price reflects 12% discount off MSRP. Tax, title, license, registration, and dealer fees additional. Stock #R26563 only. Offer expires 07/06/2026.
           </div>
+
           <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
             <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
           </div>
         </div>
       </div>
 
-      <!-- 2026 Chevrolet Equinox — LEASE -->
+      <!-- RAM 1500 LARAMIE — Stock #R26570 -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/equinox.jpg" alt="2026 Chevrolet Equinox">
-          <span class="badge-ctp">CTP &bull; ~2,100 mi</span>
-          <span class="card-deal-badge">Lease</span>
+          <img src="../Downloads/BobWeaver_R26570 bg.png" alt="2026 Ram 1500 Laramie — Serrano Green">
+          <span class="card-badge">Ram</span>
+          <div class="card-discount-badge">
+            <div class="percent">12%</div>
+            <div class="off-label">Off MSRP</div>
+          </div>
         </div>
         <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-equinox-3gnaxpeg5tl327992" target="_parent">2026 Chevrolet Equinox</a></h3>
-          <div class="trim">Sport Utility &bull; Radiant Red Tintcoat</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">Current Lessees</span>
-              <span class="price-sublabel">With Loyalty/Conquest &amp; GM Rewards Card Sign-Up</span>
+          <h3>2026 Ram 1500</h3>
+          <div class="trim">Laramie Crew Cab 4x4 6'4 Box &bull; Serrano Green &bull; Stock #R26570</div>
+
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$69,514</span>
             </div>
-            <span class="price-amount">$399<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No loyalty or special enrollment required</span>
+            <div class="price-row">
+              <span class="label">You Save</span>
+              <span class="value savings">&minus;$8,342</span>
             </div>
-            <span class="price-amount">$451<small>/mo</small></span>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$61,172*</span>
+            </div>
           </div>
-          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$36,120</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$1,800</dd>
-            <dt>Total from</dt>
-            <dd>$14,364</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>C26574</dd>
-          </dl>
+
+          <ul class="card-features">
+            <li>3.0L Hurricane Twin Turbo I6 engine</li>
+            <li>Leather-trimmed heated &amp; ventilated seats</li>
+            <li>6'4 Box &mdash; best-in-class bed length</li>
+            <li>Premium Laramie interior appointments</li>
+          </ul>
+
           <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. $1,800 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Payment of $451/mo available to all qualified lessees. Current lessees&rsquo; payment of $399/mo requires $1,000 Lease Loyalty or Conquest and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #C26574 only.
+            *Price reflects 12% discount off MSRP. Tax, title, license, registration, and dealer fees additional. Stock #R26570 only. Offer expires 07/06/2026.
           </div>
+
           <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
             <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
           </div>
         </div>
       </div>
 
-      <!-- 2026 Chevrolet Blazer EV — LEASE -->
+      <!-- RAM 1500 TRADESMAN — Stock #R26519 -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/blazer.jpg" alt="2026 Chevrolet Blazer EV">
-          <span class="badge-ctp">CTP &bull; ~2,273 mi</span>
-          <span class="card-deal-badge">Lease</span>
+          <img src="../Downloads/Bob_Weaver_R26519 bg.png" alt="2026 Ram 1500 Tradesman — Granite Crystal Metallic">
+          <span class="card-badge">Ram</span>
+          <div class="card-discount-badge">
+            <div class="percent">8%</div>
+            <div class="off-label">Off MSRP</div>
+          </div>
         </div>
         <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-blazer-ev-3gnkdgrj0ts130866" target="_parent">2026 Chevrolet Blazer EV</a></h3>
-          <div class="trim">Sport Utility &bull; Sterling Gray Metallic</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">Current Lessees</span>
-              <span class="price-sublabel">With Loyalty/Conquest &amp; GM Rewards Card Sign-Up</span>
+          <h3>2026 Ram 1500</h3>
+          <div class="trim">Tradesman Crew Cab 4WD &bull; Granite Crystal Metallic &bull; Stock #R26519</div>
+
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$56,315</span>
             </div>
-            <span class="price-amount">$499<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No loyalty or special enrollment required</span>
+            <div class="price-row">
+              <span class="label">You Save</span>
+              <span class="value savings">&minus;$4,505</span>
             </div>
-            <span class="price-amount">$552<small>/mo</small></span>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$51,810*</span>
+            </div>
           </div>
-          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$52,455</dd>
-            <dt>Selling Price</dt>
-            <dd>$44,799</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$1,000</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr**</dd>
-            <dt>Stock #</dt>
-            <dd>C26582</dd>
-          </dl>
+
+          <ul class="card-features">
+            <li>3.0L Hurricane Twin Turbo I6 engine</li>
+            <li>8-speed automatic with overdrive</li>
+            <li>Uconnect 5 with 8.4-inch touchscreen</li>
+            <li>18 city / 24 highway MPG</li>
+          </ul>
+
           <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,273 miles on the odometer. Selling price $44,799 reflects discount from MSRP. Payment of $552/mo available to all qualified lessees. Current lessees&rsquo; payment of $499/mo requires $1,000 Lease Loyalty or Conquest and $500 GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. **Effective remaining mileage allowance approximately 9,200 mi/yr after existing odometer mileage. Stock #C26582 only.
+            *Price reflects 8% discount off MSRP. Tax, title, license, registration, and dealer fees additional. Stock #R26519 only. Offer expires 07/06/2026.
           </div>
+
           <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Chevrolet Silverado 1500 — LEASE + PURCHASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/silverado.jpg" alt="2026 Chevrolet Silverado 1500">
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-chevrolet-silverado-1500-1gcukded4tz372701" target="_parent">2026 Chevrolet Silverado 1500</a></h3>
-          <div class="trim">Crew Cab &bull; Black</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">Current Lessees</span>
-              <span class="price-sublabel">With Chevy Lease Loyalty &amp; GM Rewards Card Sign-Up</span>
-            </div>
-            <span class="price-amount">$599<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No loyalty or special enrollment required</span>
-            </div>
-            <span class="price-amount">$703<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
-          <div class="card-alt-offer">
-            <strong>Or Purchase &amp; Save up to $10,350</strong>
-            0% APR for 60 months or 1.9% for 72 months
-            <div class="alt-qualify">May also qualify: Trade Assist &minus;$1,000 (2012+ trade-in) + GM Rewards &minus;$500 &mdash; total savings up to $11,850</div>
-          </div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$64,800</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$3,000</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>C26660</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. $3,000 due at signing; all PA taxes and fees included. Payment of $703/mo available to all qualified lessees. Current lessees&rsquo; payment of $599/mo requires $2,500 Chevrolet Lease Loyalty (current Chevrolet lease through GM Financial or Ally) and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Purchase option: 0% APR/60 mo or 1.9% APR/72 mo. Purchase savings of $10,350 available to all buyers ($4,350 Bob Weaver Discount + $4,250 Consumer Cash + $1,750 Bonus Cash). Additional: Trade Assist &minus;$1,000 (requires 2012+ trade-in) and GM Rewards &minus;$500 for total up to $11,850. Not all buyers will qualify. Stock #C26660 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- GMC (4) -->
-
-      <!-- 2026 GMC Terrain — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/terrain.jpg" alt="2026 GMC Terrain Denali">
-          <span class="badge-ctp">CTP &bull; ~2,100 mi</span>
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-terrain-3gkalueg3tl284180" target="_parent">2026 GMC Terrain</a></h3>
-          <div class="trim">Denali &bull; Volcanic Red Tintcoat</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">Current Lessees</span>
-              <span class="price-sublabel">With Loyalty/Conquest &amp; GM Rewards Card Sign-Up</span>
-            </div>
-            <span class="price-amount">$399<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No loyalty or special enrollment required</span>
-            </div>
-            <span class="price-amount">$484<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$38,425</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$3,300</dd>
-            <dt>Total from</dt>
-            <dd>$14,364</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>G26539</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. $3,300 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Payment of $484/mo available to all qualified lessees. Current lessees&rsquo; payment of $399/mo requires $2,000 Lease Loyalty or Conquest and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Stock #G26539 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 GMC Sierra EV — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/sierra-ev.jpg" alt="2026 GMC Sierra EV">
-          <span class="badge-ctp">CTP &bull; ~2,100 mi</span>
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-ev-1gt1eseh7tu413112" target="_parent">2026 GMC Sierra EV</a></h3>
-          <div class="trim">Crew Cab &bull; Dark Ember Metallic</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">With GM Rewards Card</span>
-              <span class="price-sublabel">Requires new enrollment in GM Rewards Card program</span>
-            </div>
-            <span class="price-amount">$559<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No special enrollment required</span>
-            </div>
-            <span class="price-amount">$577<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$66,575</dd>
-            <dt>Discount</dt>
-            <dd>$10,651</dd>
-            <dt>Selling Price</dt>
-            <dd>$55,924</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$3,500</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>G26606</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. $3,500 due at signing; all PA taxes and fees included. CTP vehicle with approximately 2,100 miles on the odometer. Selling price of $55,924 reflects $10,651 discount from MSRP. Payment of $577/mo available to all qualified lessees. My GM Rewards Card Sign-Up Save ($500) requires new enrollment and reduces payment to $559/mo. Stock #G26606 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 GMC Canyon — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/canyon.jpg" alt="2026 GMC Canyon AT4">
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-canyon-1gtp2bek1t1159221" target="_parent">2026 GMC Canyon</a></h3>
-          <div class="trim">AT4 &bull; Sterling Metallic</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">With GM Rewards Card</span>
-              <span class="price-sublabel">Requires new enrollment in GM Rewards Card program</span>
-            </div>
-            <span class="price-amount">$596<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No special enrollment required</span>
-            </div>
-            <span class="price-amount">$611<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through GM Financial. 39-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$53,120</dd>
-            <dt>Selling Price</dt>
-            <dd>$50,198</dd>
-            <dt>Term</dt>
-            <dd>39 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$1,000</dd>
-            <dt>Total</dt>
-            <dd>$23,244</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>G26570</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. 39-month lease term. $1,000 due at signing; all PA taxes and fees included. Payment of $611/mo available to all qualified lessees. My GM Rewards Card Sign-Up Save ($500) requires new enrollment and reduces payment to $596/mo. Stock #G26570 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 GMC Sierra 1500 — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/sierra.jpg" alt="2026 GMC Sierra 1500">
-          <span class="badge-ctp">CTP &bull; ~3,700 mi</span>
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-1500-3gtpucek4tg107230" target="_parent">2026 GMC Sierra 1500</a></h3>
-          <div class="trim">Crew Cab &bull; Summit White</div>
-          <div class="card-pricing card-pricing-conditional">
-            <div class="price-info">
-              <span class="price-label">Current Lessees</span>
-              <span class="price-sublabel">With Loyalty/Conquest &amp; GM Rewards Card Sign-Up</span>
-            </div>
-            <span class="price-amount">$599<small>/mo</small></span>
-          </div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No loyalty or special enrollment required</span>
-            </div>
-            <span class="price-amount">$667<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through GM Financial. 36-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$60,150</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$1,000</dd>
-            <dt>Total from</dt>
-            <dd>$21,564</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>G26525</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease through GM Financial with approved credit. $1,000 due at signing; all PA taxes and fees included. CTP vehicle with approximately 3,700 miles on the odometer. Payment of $667/mo available to all qualified lessees. Current lessees&rsquo; payment of $599/mo requires $1,500 Lease Loyalty or Conquest and $500 My GM Rewards Card Sign-Up Save (requires new enrollment). Loyalty requires current GM lease; Conquest requires current non-GM brand lease. Includes GMC Truck Month Bonus (subject to availability). Stock #G26525 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- JEEP (3) -->
-
-      <!-- 2026 Jeep Compass — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/compass.jpg" alt="2026 Jeep Compass Limited">
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-jeep-compass-3c4njdcn8tt243323" target="_parent">2026 Jeep Compass</a></h3>
-          <div class="trim">Limited &bull; Silver Zynith Metallic</div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No special enrollment required</span>
-            </div>
-            <span class="price-amount">$397<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through Chrysler Capital. 39-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$38,060</dd>
-            <dt>Selling Price</dt>
-            <dd>$36,760</dd>
-            <dt>Term</dt>
-            <dd>39 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$3,499</dd>
-            <dt>Total</dt>
-            <dd>$15,483</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>J26563</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease with approved credit through Chrysler Capital. 39-month lease term. $3,499 due at signing; all PA taxes and fees included. Selling price of $36,760 reflects dealer discount from MSRP. Payment includes $3,000 manufacturer rebate. 10,000 miles per year allowance. Not all buyers will qualify. Stock #J26563 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Jeep Cherokee — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/cherokee.jpg" alt="2026 Jeep Cherokee Limited">
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-jeep-cherokee-3c4pjmb20tt240707" target="_parent">2026 Jeep Cherokee</a></h3>
-          <div class="trim">Limited &bull; Red Hot Pearlcoat</div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No special enrollment required</span>
-            </div>
-            <span class="price-amount">$499<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through Chrysler Capital. 42-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$43,215</dd>
-            <dt>Selling Price</dt>
-            <dd>$41,543</dd>
-            <dt>Term</dt>
-            <dd>42 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$3,699</dd>
-            <dt>Total</dt>
-            <dd>$20,958</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>J26551</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease with approved credit through Chrysler Capital. 42-month lease term. $3,699 due at signing; all PA taxes and fees included. Selling price of $41,543 reflects dealer discount from MSRP. Payment includes $1,750 manufacturer rebate. 10,000 miles per year allowance. Not all buyers will qualify. Stock #J26551 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
-            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2026 Jeep Grand Cherokee — LEASE -->
-      <div class="special-card">
-        <div class="card-image">
-          <img src="images/grand-cherokee.jpg" alt="2026 Jeep Grand Cherokee Laredo">
-          <span class="card-deal-badge">Lease</span>
-        </div>
-        <div class="card-body">
-          <h3><a href="https://www.bobweaverauto.com/vehicle-info/new-2026-jeep-grand-cherokee-1c4rjharxtc221768" target="_parent">2026 Jeep Grand Cherokee</a></h3>
-          <div class="trim">Laredo &bull; Velvet Red Pearlcoat</div>
-          <div class="card-pricing card-pricing-everyone">
-            <div class="price-info">
-              <span class="price-label">All Qualified Buyers</span>
-              <span class="price-sublabel">No special enrollment required</span>
-            </div>
-            <span class="price-amount">$499<small>/mo</small></span>
-          </div>
-          <div class="card-terms">With approved credit through Chrysler Capital. 36-mo lease, 10,000 mi/yr.</div>
-          <dl class="card-details">
-            <dt>MSRP</dt>
-            <dd>$49,570</dd>
-            <dt>Selling Price</dt>
-            <dd>$47,133</dd>
-            <dt>Term</dt>
-            <dd>36 Months</dd>
-            <dt>Due at Signing</dt>
-            <dd>$3,250</dd>
-            <dt>Total</dt>
-            <dd>$17,964</dd>
-            <dt>Mileage</dt>
-            <dd>10,000/yr</dd>
-            <dt>Stock #</dt>
-            <dd>J26535</dd>
-          </dl>
-          <div class="card-disclaimer">
-            Lease with approved credit through Chrysler Capital. 36-month lease term. $3,250 due at signing; all PA taxes and fees included. Selling price of $47,133 reflects dealer discount from MSRP. Payment includes $5,000 manufacturer rebate. 10,000 miles per year allowance. Not all buyers will qualify. Stock #J26535 only.
-          </div>
-          <div class="card-footer">
-            <a href="tel:5706227191" class="btn btn-primary">Call for Details</a>
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
             <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
           </div>
         </div>
@@ -1475,7 +808,7 @@
       <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="promo-card">
         <div class="icon">&#128663;</div>
         <h4>New Inventory</h4>
-        <p>Browse our full selection of new Chevrolet and GMC vehicles.</p>
+        <p>Browse our full selection of new Chevrolet, GMC, Jeep, and Ram vehicles.</p>
       </a>
       <a href="https://www.bobweaverauto.com/content/schedule-service" target="_parent" class="promo-card">
         <div class="icon">&#128295;</div>
@@ -1494,114 +827,27 @@
   <section class="disclaimer">
     <div class="container">
 
-      <h3>Pricing Structure</h3>
+      <h3>Pricing &amp; Discount</h3>
       <ul>
-        <li>Each vehicle displays two pricing tiers. The headline &ldquo;everyone&rdquo; payment is available to all qualified buyers with approved credit through GM Financial. No loyalty, conquest, or rewards-card enrollment is required for the headline price.</li>
-        <li>Where shown, &ldquo;Current Lessees&rdquo; pricing requires specific loyalty or conquest eligibility as described on each vehicle card. Not all buyers will qualify for the lower conditional payment.</li>
-        <li>&ldquo;You May Also Qualify For&rdquo; items (such as My GM Rewards Card Sign-Up Save) require additional enrollment or actions and are not included in the headline payment.</li>
+        <li>Advertised discounts of 12% off MSRP (Big Horn and Laramie) and 8% off MSRP (Tradesman) apply to the specific in-stock 2026 Ram 1500 units identified by stock number only.</li>
+        <li>Sample prices shown are based on representative MSRPs and are for illustration purposes. Actual sale price will be calculated based on the specific vehicle&rsquo;s window sticker MSRP at the time of purchase.</li>
+        <li>Prices do not include tax, title, license, registration, destination/delivery charges, or dealer-installed accessories. Dealer fees may apply.</li>
+        <li>Discounts may not be combined with certain other manufacturer incentives, rebates, or special financing offers. See dealer for offer compatibility.</li>
       </ul>
 
-      <h3>Lease Terms &amp; Payments</h3>
+      <h3>Vehicle Availability</h3>
       <ul>
-        <li>All advertised lease offers are based on closed-end leases through GM Financial with approved above-average credit (typically Tier 1 or Tier 2).</li>
-        <li>All advertised monthly payments and due-at-signing amounts include all applicable Pennsylvania taxes and fees (sales tax, title, license, government fees, and dealer processing/documentation fees).</li>
-        <li>No security deposit required on featured lease vehicles.</li>
-        <li>All leases are 36 months at 10,000 miles per year unless otherwise noted. The GMC Canyon (Stock #G26570) lease is 39 months. The Jeep Compass (Stock #J26563) lease is 39 months. The Jeep Cherokee (Stock #J26551) lease is 42 months.</li>
-        <li>Total of payments shown reflects the base monthly payment multiplied by the lease term and does not include the amount due at signing.</li>
-      </ul>
-
-      <h3>Jeep Lease Terms</h3>
-      <ul>
-        <li>All advertised Jeep lease offers are closed-end leases through Chrysler Capital with approved above-average credit.</li>
-        <li>All advertised Jeep monthly payments and due-at-signing amounts include all applicable Pennsylvania taxes and fees (sales tax, title, license, government fees, and dealer processing/documentation fees).</li>
-        <li>2026 Jeep Compass Limited (Stock #J26563): 39-month lease, $397/mo, $3,499 due at signing. Selling price of $36,760 includes $3,000 manufacturer rebate.</li>
-        <li>2026 Jeep Cherokee Limited (Stock #J26551): 42-month lease, $499/mo, $3,699 due at signing. Selling price of $41,543 includes $1,750 manufacturer rebate.</li>
-        <li>2026 Jeep Grand Cherokee Laredo (Stock #J26535): 36-month lease, $499/mo, $3,250 due at signing. Selling price of $47,133 includes $5,000 manufacturer rebate.</li>
-      </ul>
-
-      <h3>Finance Terms</h3>
-      <ul>
-        <li>The 2026 Chevrolet Trax (Stock #C26630) is a finance offer, not a lease. Finance terms: 5.9% APR for 84 months through GM Financial with approved credit and $1,000 due at signing. All PA taxes and fees are included in the advertised payment.</li>
-        <li>Headline payment of $371/mo reflects selling price of $25,063 (includes $1,250 rebate and $750 bonus cash). My GM Rewards Card Sign-Up Save ($500) requires new enrollment and is not included in the headline payment.</li>
-        <li>Monthly payment and APR may vary based on individual creditworthiness and lender approval.</li>
-      </ul>
-
-      <h3>Purchase Option</h3>
-      <ul>
-        <li>2026 Chevrolet Silverado 1500 (Stock #C26660) is available for purchase in addition to the advertised lease: 0% APR for 60 months or 1.9% APR for 72 months on approved credit through GM Financial.</li>
-        <li>Total purchase savings of up to $11,850 include: $4,350 Bob Weaver Discount, $4,250 Consumer Cash, $1,000 Trade Assist (requires trade-in of 2012 model year or newer vehicle), $1,750 Bonus Cash, and $500 My GM Rewards Card Sign-Up Save.</li>
-        <li>Not all buyers will qualify for all incentives. Trade Assist requires a qualifying trade-in vehicle. See dealer for complete details.</li>
-      </ul>
-
-      <h3>Credit &amp; Qualification</h3>
-      <ul>
-        <li>All offers require approved above-average credit through GM Financial. Not all applicants will qualify for the lowest payment or best terms shown.</li>
-        <li>Monthly payment, down payment, and lease/finance terms may vary based on individual creditworthiness and lender approval.</li>
-        <li>Lender may require additional down payment, adjusted terms, or security deposit based on credit review.</li>
-        <li>Offers are subject to lender program availability and may be withdrawn at any time without notice.</li>
-      </ul>
-
-      <h3>Courtesy Transportation Program (CTP) Vehicles</h3>
-      <ul>
-        <li>Several vehicles shown are Courtesy Transportation Program (CTP) vehicles previously used in dealership service operations. These vehicles have existing mileage as noted on each vehicle listing.</li>
-        <li>CTP vehicles are titled as new but have been driven and may show minor wear consistent with their use and mileage.</li>
-        <li>For leased CTP vehicles, the existing mileage counts toward the total mileage allowance. The effective remaining mileage allowance per year may be lower than the stated 10,000 miles/year after accounting for odometer mileage at lease signing.</li>
-        <li>**2026 Chevrolet Blazer EV (Stock #C26582): This vehicle has approximately 2,273 miles on the odometer. The 36-month lease allowance is 30,000 total miles (10,000/yr); after accounting for existing mileage, the effective remaining allowance is approximately 9,200 miles per year.</li>
-      </ul>
-
-      <h3>Mileage &amp; Wear</h3>
-      <ul>
-        <li>All featured leases allow 10,000 miles per year unless otherwise noted (see CTP vehicle section above for adjusted allowances).</li>
-        <li>Lessee is responsible for excess mileage charges of $0.25 per mile over the allowed mileage at lease end.</li>
-        <li>Lessee is responsible for excessive wear and use charges as defined by the lessor&rsquo;s published wear and use standards, which will be provided at lease signing.</li>
-        <li>Higher annual mileage options (12,000 or 15,000 miles/year) may be available at additional monthly cost. See dealer for pricing.</li>
-      </ul>
-
-      <h3>Incentives &amp; Rebates</h3>
-      <ul>
-        <li>Customer Cash Rebates included in advertised payments where noted are manufacturer incentives and are subject to change or cancellation by the manufacturer without notice.</li>
-        <li><strong>GM Lease Loyalty:</strong> Requires lessee to have a current GM lease through GM Financial or Ally. Proof of current lease contract required at time of signing. Specific brand loyalty (e.g., Chevrolet Lease Loyalty) may require a current lease of that specific brand. Loyalty incentives are not included in the headline &ldquo;everyone&rdquo; payment and are reflected only in the &ldquo;Current Lessees&rdquo; tier.</li>
-        <li><strong>Lease Conquest:</strong> Requires lessee to have a current lease of a competitive (non-GM) brand vehicle. Proof of current competitive brand lease required at time of signing. Conquest incentives are not included in the headline &ldquo;everyone&rdquo; payment.</li>
-        <li><strong>My GM Rewards Card Sign-Up Save ($500):</strong> Requires new enrollment in the My GM Rewards Card program. Subject to credit approval for the rewards card. This incentive is not included in the headline &ldquo;everyone&rdquo; payment and is shown separately under &ldquo;You May Also Qualify For&rdquo; or included in the &ldquo;Current Lessees&rdquo; tier where applicable. See dealer or gmrewardscard.com for complete terms and conditions.</li>
-        <li><strong>GMC Truck Month Bonus:</strong> Available on qualifying GMC trucks during the promotional period. Subject to availability and may be withdrawn by the manufacturer without notice.</li>
-        <li>Incentives and rebates may not be combined with certain other manufacturer or dealer offers. See dealer for offer compatibility.</li>
-      </ul>
-
-      <h3>Vehicle Availability &amp; Pricing</h3>
-      <ul>
-        <li>Offers apply only to the specific stock numbers shown on each vehicle and are subject to prior sale on a first-come, first-served basis.</li>
-        <li>One offer per vehicle. Offers cannot be transferred to other stock numbers or vehicle configurations.</li>
-        <li>MSRP shown is the Manufacturer&rsquo;s Suggested Retail Price. Selling prices shown (where applicable) reflect dealer discounts and/or manufacturer incentives applied.</li>
-        <li>Prices, payments, and offers may vary based on residual value, vehicle configuration, and availability at time of transaction.</li>
-        <li>Photographs and illustrations are for reference purposes only and may not reflect the exact color, trim, options, or other specifications of the specific vehicle offered.</li>
+        <li>Offers apply to in-stock vehicles only and are subject to prior sale on a first-come, first-served basis.</li>
+        <li>Photographs and feature descriptions are for reference purposes only and may not reflect the exact color, trim, options, or specifications of specific in-stock vehicles.</li>
         <li>Dealer is not responsible for typographical, photographic, or pricing errors. All offers subject to correction.</li>
       </ul>
 
-      <h3>End of Lease</h3>
-      <ul>
-        <li>At lease end, lessee has the option to: (a) return the vehicle and pay any end-of-lease charges, (b) purchase the vehicle at the predetermined residual value established at lease signing plus any applicable fees and taxes, or (c) lease or purchase a new vehicle.</li>
-        <li>Early termination of the lease may result in substantial early termination charges as outlined in the lease agreement, including remaining depreciation and finance charges.</li>
-        <li>A disposition fee (typically $395&ndash;$595) may apply at lease end if the vehicle is returned and the lessee does not lease or purchase a new GM vehicle.</li>
-        <li>Lessee is responsible for any excess wear and use charges and over-mileage charges assessed at lease return.</li>
-      </ul>
-
-      <h3>Insurance &amp; Requirements</h3>
-      <ul>
-        <li>Lessee must maintain comprehensive and collision insurance coverage on the leased vehicle for the entire duration of the lease, with the lessor named as loss payee and additional insured. Minimum coverage limits are determined by the lessor.</li>
-        <li>Lessee is responsible for all scheduled maintenance, repairs, and service during the lease term in accordance with the manufacturer&rsquo;s recommended maintenance schedule.</li>
-        <li>GAP (Guaranteed Asset Protection) coverage may be included with the lease or available for purchase. GAP coverage protects the lessee in the event the vehicle is totaled or stolen and the insurance settlement is less than the remaining lease balance. See your lease agreement or dealer for details.</li>
-      </ul>
-
-      <h3>General</h3>
+      <h3>Offer Terms</h3>
       <ul>
         <li>All offers valid only at Bob Weaver Auto, 1777 Centre Turnpike, Pottsville, PA 17901.</li>
-        <li>All offers expire 06/30/2026 unless extended, modified, or withdrawn by the manufacturer or dealer prior to that date.</li>
-        <li>Dealer participation may affect final consumer cost.</li>
+        <li>All offers expire 07/06/2026 unless extended, modified, or withdrawn by the manufacturer or dealer prior to that date.</li>
         <li>Must take delivery from dealer stock by the offer expiration date.</li>
-        <li>Lease offers cannot be combined with purchase/finance offers on the same vehicle unless explicitly stated (see Silverado 1500).</li>
-        <li>Jeep lease offers are through Chrysler Capital. GM lease offers are through GM Financial. Lender terms, conditions, and credit requirements may differ between programs.</li>
-        <li>Pennsylvania state and local taxes apply and are included in the advertised payments. Tax treatment of leases may vary; consult your tax advisor.</li>
-        <li>See dealer for complete details, current offer availability, and to verify eligibility for all advertised incentives.</li>
+        <li>See dealer for complete details and current offer availability.</li>
       </ul>
 
     </div>
