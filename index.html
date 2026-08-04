@@ -1554,5 +1554,31 @@
     </div>
   </section>
 
+
+  <!-- Tell the parent page how tall we actually are, so the iframe can size itself.
+       Harmless if the parent has no listener. See ticket #29050. -->
+  <script>
+  (function () {
+    var last = 0;
+    function post() {
+      var h = Math.max(
+        document.documentElement.scrollHeight,
+        document.body ? document.body.scrollHeight : 0
+      );
+      if (Math.abs(h - last) < 24) return;
+      last = h;
+      try { parent.postMessage({ bwSpecialsHeight: h }, '*'); } catch (e) {}
+    }
+    window.addEventListener('load', post);
+    window.addEventListener('resize', post);
+    document.addEventListener('DOMContentLoaded', post);
+    if (window.ResizeObserver && document.documentElement) {
+      new ResizeObserver(post).observe(document.documentElement);
+    }
+    setInterval(post, 1000);
+    post();
+  })();
+  </script>
+
 </body>
 </html>
