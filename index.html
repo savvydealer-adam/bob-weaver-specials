@@ -602,6 +602,133 @@
     .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
 
     /* ============================================
+       BRAND BADGES ON CARDS
+       ============================================ */
+    .card-badge.b-chevrolet { background: var(--loyal-navy); }
+    .card-badge.b-gmc       { background: #C8102E; }
+    .card-badge.b-jeep      { background: #2e7d32; }
+    .card-badge.b-ram       { background: #1a1a1a; }
+    .card-badge.b-dodge     { background: #B4131C; }
+
+    .card-discount-badge .percent.sm {
+      font-size: 1.45rem;
+      letter-spacing: -0.5px;
+    }
+
+    /* ============================================
+       DEMO / COURTESY UNIT FLAG
+       ============================================ */
+    .card-demo {
+      display: inline-block;
+      background: var(--loyal-navy);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 12px;
+    }
+
+    /* ============================================
+       CONDITIONAL (TIER 2) PRICING
+       ============================================ */
+    .card-conditional {
+      background: #fbfcfe;
+      border: 1px dashed var(--neutral-200);
+      border-left: 3px solid var(--service-blue);
+      border-radius: 0 6px 6px 0;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+    }
+    .cond-head {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--service-blue);
+      margin-bottom: 8px;
+    }
+    .cond-list {
+      font-size: 0.75rem;
+      color: var(--neutral-700);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+    .cond-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      padding: 3px 0;
+      border-bottom: 1px dotted var(--neutral-200);
+    }
+    .cond-list li:last-child { border-bottom: none; }
+    .cond-list .amt {
+      font-weight: 700;
+      color: #2e7d32;
+      white-space: nowrap;
+    }
+    .cond-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      border-top: 1px solid var(--neutral-200);
+      padding-top: 8px;
+    }
+    .cond-total .label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--neutral-500);
+    }
+    .cond-total .value {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--service-blue);
+    }
+
+    /* ============================================
+       RATE / LEASE / PAYMENT OFFER STRIPS
+       ============================================ */
+    .card-offers { margin-bottom: 14px; }
+    .card-offers li {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--loyal-navy);
+      background: var(--parchment);
+      border-left: 3px solid var(--americana-orange);
+      border-radius: 0 4px 4px 0;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+    .card-offers li:last-child { margin-bottom: 0; }
+    .card-offers .offer-lease   { border-left-color: var(--service-blue); }
+    .card-offers .offer-finance { border-left-color: #2e7d32; }
+
+    .card-note {
+      font-size: 0.78rem;
+      color: var(--neutral-700);
+      background: #fff8e6;
+      border-left: 3px solid var(--americana-orange);
+      border-radius: 0 4px 4px 0;
+      padding: 8px 12px;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    /* section headings sit above the newsprint overlay */
+    .section-intro { position: relative; z-index: 1; }
+
+    /* ============================================
        RESPONSIVE
        ============================================ */
     @media (max-width: 992px) {
@@ -625,28 +752,31 @@
   <!-- ============ HERO BANNER ============ -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-tag">America's 250th Birthday Sale</div>
-      <h1>Ram 1500 <em>Blowout</em></h1>
-      <p>Celebrate America's 250th birthday with unbeatable savings on new 2026 Ram 1500 trucks. Big Horn, Laramie, and Warlock &mdash; all priced to move all month long at Bob Weaver Auto.</p>
+      <div class="hero-tag">August 2026 Specials</div>
+      <h1>This Month&rsquo;s <em>Best Deals</em></h1>
+      <p>Thirteen hand-picked offers across Chevrolet, GMC, Jeep, Ram and Dodge &mdash; every one on a specific truck or SUV sitting on our lot in Pottsville right now. Amount off, low rates, or a low monthly payment: pick what matters to you.</p>
       <a href="#specials" class="hero-cta">View Offers Below</a>
     </div>
   </section>
 
   <!-- ============ ANNOUNCEMENT BAR ============ -->
   <div class="announcement-bar">
-    &#9733; &nbsp; Up to 12% Off MSRP &mdash; All Offers Expire 07/31/2026 &nbsp; &#9733;
+    &#9733; &nbsp; 0% APR Available &bull; Up to 12% Off MSRP &bull; All Offers Expire 08/31/2026 &nbsp; &#9733;
   </div>
 
-  <!-- ============ VEHICLE SPECIALS ============ -->
-  <section class="specials-section" id="specials">
-
+  <a id="specials"></a>
+  <section class="specials-section" id="ram">
+    <div class="section-intro">
+      <h2>Ram 1500 &mdash; 12% Off MSRP</h2>
+      <p>The Ram 1500 deal continues through August. Twelve percent off MSRP on every truck below, in stock and ready to go.</p>
+    </div>
     <div class="specials-grid">
 
-      <!-- RAM 1500 BIG HORN — Stock #R26563 -->
+      <!-- 2026 RAM 1500 — Stock #R26558 -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/ram-bighorn-r26563.png" alt="2026 Ram 1500 Big Horn — Molten Red Pearlcoat">
-          <span class="card-badge">Ram</span>
+          <img src="images/ram-bighorn-r26558.jpg" alt="2026 2026 Ram 1500 — Big Horn Crew Cab 4x4 &bull; Serrano Green Metallic" loading="lazy">
+          <span class="card-badge b-ram">Ram</span>
           <div class="card-discount-badge">
             <div class="percent">12%</div>
             <div class="off-label">Off MSRP</div>
@@ -654,47 +784,42 @@
         </div>
         <div class="card-body">
           <h3>2026 Ram 1500</h3>
-          <div class="trim">Big Horn Crew Cab 4x4 5'7 Box &bull; Molten Red Pearlcoat &bull; Stock #R26563</div>
-
+          <div class="trim">Big Horn Crew Cab 4x4 &bull; Serrano Green Metallic &bull; Stock #R26558</div>
           <div class="card-pricing">
             <div class="price-row">
               <span class="label">MSRP</span>
-              <span class="value msrp-strike">$57,865</span>
+              <span class="value msrp-strike">$65,725</span>
             </div>
             <div class="price-row">
-              <span class="label">You Save</span>
-              <span class="value savings">&minus;$6,944</span>
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$7,887</span>
             </div>
             <div class="price-divider"></div>
             <div class="price-row">
               <span class="label">Sale Price</span>
-              <span class="value sale-price">$50,921*</span>
+              <span class="value sale-price">$57,838*</span>
             </div>
           </div>
-
           <ul class="card-features">
-            <li>3.0L Hurricane Twin Turbo I6 engine</li>
-            <li>8-speed automatic transmission</li>
-            <li>4x4 drivetrain</li>
-            <li>18 city / 24 highway MPG</li>
+            <li>3.0L Hurricane Twin Turbo I6</li>
+            <li>8-speed automatic &bull; 4x4</li>
+            <li>Adaptive Cruise Control</li>
+            <li>16 city / 20 highway MPG</li>
           </ul>
-
           <div class="card-disclaimer">
-            *Price reflects 12% discount off MSRP. Tax, title, license, registration, and dealer fees additional. Stock #R26563 only. Offer expires 07/31/2026.
+            *Sale price is $65,725 MSRP less a $7,887 dealer discount, available to all buyers. Discount reflects 12% off MSRP. Tax, title, license, registration and a $490 documentary fee are additional. Stock #R26558 only. Offer expires 08/31/2026.
           </div>
-
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
             <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
           </div>
         </div>
       </div>
-
-      <!-- RAM 1500 LARAMIE — Stock #R26570 -->
+      <!-- 2026 RAM 1500 — Stock #R26550 -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/ram-laramie-r26570.png" alt="2026 Ram 1500 Laramie — Serrano Green">
-          <span class="card-badge">Ram</span>
+          <img src="images/ram-bighorn-r26550.jpg" alt="2026 2026 Ram 1500 — Big Horn Crew Cab 4x4 &bull; Molten Red Pearlcoat" loading="lazy">
+          <span class="card-badge b-ram">Ram</span>
           <div class="card-discount-badge">
             <div class="percent">12%</div>
             <div class="off-label">Off MSRP</div>
@@ -702,62 +827,57 @@
         </div>
         <div class="card-body">
           <h3>2026 Ram 1500</h3>
-          <div class="trim">Laramie Crew Cab 4x4 6'4 Box &bull; Serrano Green &bull; Stock #R26570</div>
-
+          <div class="trim">Big Horn Crew Cab 4x4 &bull; Molten Red Pearlcoat &bull; Stock #R26550</div>
           <div class="card-pricing">
             <div class="price-row">
               <span class="label">MSRP</span>
-              <span class="value msrp-strike">$69,514</span>
+              <span class="value msrp-strike">$65,635</span>
             </div>
             <div class="price-row">
-              <span class="label">You Save</span>
-              <span class="value savings">&minus;$8,342</span>
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$7,876</span>
             </div>
             <div class="price-divider"></div>
             <div class="price-row">
               <span class="label">Sale Price</span>
-              <span class="value sale-price">$61,172*</span>
+              <span class="value sale-price">$57,759*</span>
             </div>
           </div>
-
           <ul class="card-features">
-            <li>3.0L Hurricane Twin Turbo I6 engine</li>
-            <li>Leather-trimmed heated &amp; ventilated seats</li>
-            <li>6'4 Box &mdash; best-in-class bed length</li>
-            <li>Premium Laramie interior appointments</li>
+            <li>3.0L Hurricane Twin Turbo I6</li>
+            <li>8-speed automatic &bull; 4x4</li>
+            <li>Adaptive Cruise Control</li>
+            <li>16 city / 20 highway MPG</li>
           </ul>
-
           <div class="card-disclaimer">
-            *Price reflects 12% discount off MSRP. Tax, title, license, registration, and dealer fees additional. Stock #R26570 only. Offer expires 07/31/2026.
+            *Sale price is $65,635 MSRP less a $7,876 dealer discount, available to all buyers. Discount reflects 12% off MSRP. Tax, title, license, registration and a $490 documentary fee are additional. Stock #R26550 only. Offer expires 08/31/2026.
           </div>
-
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
             <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
           </div>
         </div>
       </div>
-
-      <!-- RAM 1500 WARLOCK — Stock #R26548 -->
+      <!-- 2026 RAM 1500 — Stock #R26548 -->
       <div class="special-card">
         <div class="card-image">
-          <img src="images/ram-warlock-r26548.png" alt="2026 Ram 1500 Warlock — Granite Crystal Metallic">
-          <span class="card-badge">Ram</span>
+          <img src="images/ram-warlock-r26548.jpg" alt="2026 2026 Ram 1500 — Warlock Crew Cab 4x4 &bull; Granite Crystal Metallic" loading="lazy">
+          <span class="card-badge b-ram">Ram</span>
           <div class="card-discount-badge">
-            <div class="percent" style="font-size:1.1rem; line-height:1.2;">Save<br>$5,651</div>
+            <div class="percent sm">$5,651</div>
+            <div class="off-label">Off MSRP</div>
           </div>
         </div>
         <div class="card-body">
           <h3>2026 Ram 1500</h3>
-          <div class="trim">Warlock Crew Cab 4x4 5'7 Box &bull; Granite Crystal Metallic &bull; Stock #R26548</div>
-
+          <div class="trim">Warlock Crew Cab 4x4 &bull; Granite Crystal Metallic &bull; Stock #R26548</div>
           <div class="card-pricing">
             <div class="price-row">
               <span class="label">MSRP</span>
               <span class="value msrp-strike">$58,860</span>
             </div>
             <div class="price-row">
-              <span class="label">You Save</span>
+              <span class="label">Dealer Discount</span>
               <span class="value savings">&minus;$5,651</span>
             </div>
             <div class="price-divider"></div>
@@ -766,18 +886,15 @@
               <span class="value sale-price">$53,209*</span>
             </div>
           </div>
-
           <ul class="card-features">
-            <li>3.0L Hurricane Twin Turbo I6 engine</li>
+            <li>3.0L Hurricane Twin Turbo I6</li>
             <li>8-speed automatic with overdrive</li>
             <li>Uconnect 5 with 8.4-inch touchscreen</li>
             <li>18 city / 24 highway MPG</li>
           </ul>
-
           <div class="card-disclaimer">
-            *Sale price reflects discount off MSRP. Tax, title, license, registration, and dealer fees additional. Stock #R26548 only. Offer expires 07/31/2026.
+            *Sale price is $58,860 MSRP less a $5,651 dealer discount, available to all buyers. Tax, title, license, registration and a $490 documentary fee are additional. Stock #R26548 only. Offer expires 08/31/2026.
           </div>
-
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
             <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
@@ -786,7 +903,583 @@
       </div>
 
     </div>
+  </section>
+  <section class="specials-section" id="cdjr">
+    <div class="section-intro">
+      <h2>Dodge &amp; Jeep Standouts</h2>
+      <p>August&rsquo;s hottest Chrysler, Dodge, Jeep and Ram offers &mdash; big rebates, low rates, and dealer discounts stacked on top.</p>
+    </div>
+    <div class="specials-grid">
 
+      <!-- 2026 DODGE CHARGER — Stock #D26000 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/charger-d26000.jpg" alt="2026 2026 Dodge Charger — Scat Pack Plus &bull; AWD" loading="lazy">
+          <span class="card-badge b-dodge">Dodge</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$7,694</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Dodge Charger</h3>
+          <div class="trim">Scat Pack Plus &bull; AWD &bull; Stock #D26000</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$65,595</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$2,194</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$63,401*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $5,500 more</div>
+            <ul class="cond-list">
+              <li><span>Manufacturer rebate</span><span class="amt">&minus;$5,500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$57,901&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-features">
+            <li>All-wheel drive</li>
+            <li>Surround-view camera</li>
+            <li>Adaptive Cruise Control</li>
+            <li>16 city / 23 highway MPG</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $65,595 MSRP less a $2,194 dealer discount, available to all buyers. &dagger;Best price of $57,901 additionally reflects $5,500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #D26000 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 GRAND WAGONEER — Stock #J26594 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/wagoneer-j26594.jpg" alt="2026 2026 Grand Wagoneer — Upland 4x4 &bull; 7 Passenger" loading="lazy">
+          <span class="card-badge b-jeep">Jeep</span>
+          <div class="card-discount-badge">
+            <div class="percent">4.9%</div>
+            <div class="off-label">APR 72 mo</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Grand Wagoneer</h3>
+          <div class="trim">Upland 4x4 &bull; 7 Passenger &bull; Stock #J26594</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$76,080</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$3,380</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$72,700*</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-apr">4.9% APR for 72 months available for well-qualified buyers</li>
+          </ul>
+          <ul class="card-features">
+            <li>Third-row seating &bull; seats 7</li>
+            <li>Panoramic sunroof</li>
+            <li>Surround-view camera</li>
+            <li>17 city / 23 highway MPG</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $76,080 MSRP less a $3,380 dealer discount, available to all buyers. Tax, title, license, registration and a $490 documentary fee are additional. Stock #J26594 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 JEEP GLADIATOR — Stock #J26609 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/gladiator-j26609.jpg" alt="2026 2026 Jeep Gladiator — Mojave 4x4 &bull; Punk'n Orange" loading="lazy">
+          <span class="card-badge b-jeep">Jeep</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$8,283</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Jeep Gladiator</h3>
+          <div class="trim">Mojave 4x4 &bull; Punk'n Orange &bull; Stock #J26609</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$59,670</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$2,316</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$57,354*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $5,967 more</div>
+            <ul class="cond-list">
+              <li><span>10% off MSRP allowance</span><span class="amt">&minus;$5,967</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$51,387&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-apr">0% APR available in place of the cash offer &mdash; ask us which is better for you</li>
+          </ul>
+          <ul class="card-features">
+            <li>Mojave off-road package</li>
+            <li>Apple CarPlay &amp; Android Auto</li>
+            <li>Adaptive Cruise Control</li>
+            <li>17 city / 22 highway MPG</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $59,670 MSRP less a $2,316 dealer discount, available to all buyers. &dagger;Best price of $51,387 additionally reflects $5,967 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #J26609 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="specials-section" id="gm">
+    <div class="section-intro">
+      <h2>Chevrolet &amp; GMC</h2>
+      <p>Amount off, low rates, or a low payment &mdash; whichever matters most to you, there&rsquo;s a GM deal here for it.</p>
+    </div>
+    <div class="specials-grid">
+
+      <!-- 2026 BLAZER EV — Stock #C26582 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/blazer-ev-c26582.jpg" alt="2026 2026 Blazer EV — AWD LT &bull; Sterling Gray Metallic" loading="lazy">
+          <span class="card-badge b-chevrolet">Chevrolet</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$11,621</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Blazer EV</h3>
+          <div class="trim">AWD LT &bull; Sterling Gray Metallic &bull; Stock #C26582</div>
+          <div class="card-demo">Demo unit &bull; 2,463 miles</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$52,455</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$10,121</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$42,334*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $1,500 more</div>
+            <ul class="cond-list">
+              <li><span>Manufacturer rebate</span><span class="amt">&minus;$1,500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$40,834&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-lease">Lease $495/mo &bull; 36 mo &bull; 12k/yr &bull; $3,500 due at signing &bull; includes PA tax &amp; fees</li>
+          </ul>
+          <ul class="card-features">
+            <li>All-wheel drive</li>
+            <li>Surround-view camera</li>
+            <li>Adaptive Cruise Control</li>
+            <li>102 city / 86 highway MPGe</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $52,455 MSRP less a $10,121 dealer discount, available to all buyers. &dagger;Best price of $40,834 additionally reflects $1,500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26582 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 GMC SIERRA EV — Stock #G26606 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/sierra-ev-g26606.jpg" alt="2026 2026 GMC Sierra EV — Elevation Crew Cab &bull; Dark Ember Metallic" loading="lazy">
+          <span class="card-badge b-gmc">GMC</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$16,402</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Sierra EV</h3>
+          <div class="trim">Elevation Crew Cab &bull; Dark Ember Metallic &bull; Stock #G26606</div>
+          <div class="card-demo">Demo unit &bull; 2,235 miles</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$66,575</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$13,652</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$52,923*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $2,750 more</div>
+            <ul class="cond-list">
+              <li><span>Manufacturer rebate</span><span class="amt">&minus;$2,750</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$50,173&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-lease">Lease $599/mo &bull; 36 mo &bull; 12k/yr &bull; $3,000 due at signing &bull; includes PA tax &amp; fees</li>
+          </ul>
+          <ul class="card-features">
+            <li>Four-wheel drive</li>
+            <li>Surround-view camera</li>
+            <li>Adaptive Cruise Control</li>
+            <li>74 city / 60 highway MPGe</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $66,575 MSRP less a $13,652 dealer discount, available to all buyers. &dagger;Best price of $50,173 additionally reflects $2,750 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26606 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 GMC SIERRA 1500 — Stock #G26587 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/sierra1500-g26587.jpg" alt="2026 2026 GMC Sierra 1500 — SLE 4WD Crew Cab &bull; Standard Box 5.3L" loading="lazy">
+          <span class="card-badge b-gmc">GMC</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$11,915</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Sierra 1500</h3>
+          <div class="trim">SLE 4WD Crew Cab &bull; Standard Box 5.3L &bull; Stock #G26587</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$64,720</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$4,165</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$60,555*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $7,750 more</div>
+            <ul class="cond-list">
+              <li><span>Consumer cash</span><span class="amt">&minus;$1,750</span></li>
+              <li><span>Bonus cash</span><span class="amt">&minus;$2,500</span></li>
+              <li><span>GM trade-in allowance (2012 or newer)</span><span class="amt">&minus;$3,000</span></li>
+              <li><span>GM Rewards sign-up &amp; spend</span><span class="amt">&minus;$500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$52,805&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-apr">2.9% APR for 72 months available for well-qualified buyers</li>
+          </ul>
+          <ul class="card-features">
+            <li>5.3L V8 &bull; 4WD Crew Cab</li>
+            <li>Surround-view camera</li>
+            <li>Apple CarPlay &amp; Android Auto</li>
+            <li>15 city / 18 highway MPG</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $64,720 MSRP less a $4,165 dealer discount, available to all buyers. &dagger;Best price of $52,805 additionally reflects $7,750 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26587 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 GMC SIERRA 2500HD — Stock #G26629 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/sierra2500-g26629.jpg" alt="2026 2026 GMC Sierra 2500HD — SLE 4WD Crew Cab &bull; Standard Box 6.6L Gas" loading="lazy">
+          <span class="card-badge b-gmc">GMC</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$6,274</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 GMC Sierra 2500HD</h3>
+          <div class="trim">SLE 4WD Crew Cab &bull; Standard Box 6.6L Gas &bull; Stock #G26629</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$69,210</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$4,774</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$64,436*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $1,500 more</div>
+            <ul class="cond-list">
+              <li><span>Consumer cash</span><span class="amt">&minus;$1,000</span></li>
+              <li><span>GM Rewards sign-up &amp; spend</span><span class="amt">&minus;$500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$62,936&dagger;</span>
+            </div>
+          </div>
+          <div class="card-note">6.6L <strong>gas</strong> V8 &mdash; hard to find while diesel supply is constrained, and we have several in stock.</div>
+          <ul class="card-features">
+            <li>6.6L gas V8 &bull; no diesel wait</li>
+            <li>4WD Crew Cab &bull; seats 6</li>
+            <li>Surround-view camera</li>
+            <li>Apple CarPlay &amp; Android Auto</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $69,210 MSRP less a $4,774 dealer discount, available to all buyers. &dagger;Best price of $62,936 additionally reflects $1,500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26629 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 SILVERADO 1500 — Stock #C26652 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/silverado-c26652.jpg" alt="2026 2026 Silverado 1500 — 2LT Trail Boss 4WD Crew Cab &bull; Standard Box 5.3L" loading="lazy">
+          <span class="card-badge b-chevrolet">Chevrolet</span>
+          <div class="card-discount-badge">
+            <div class="percent sm">$12,166</div>
+            <div class="off-label">Total Savings</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Silverado 1500</h3>
+          <div class="trim">2LT Trail Boss 4WD Crew Cab &bull; Standard Box 5.3L &bull; Stock #C26652</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$69,855</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$4,666</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$65,189*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $7,500 more</div>
+            <ul class="cond-list">
+              <li><span>Consumer cash</span><span class="amt">&minus;$4,250</span></li>
+              <li><span>Bonus cash</span><span class="amt">&minus;$1,750</span></li>
+              <li><span>Chevrolet trade assist (2012 or newer)</span><span class="amt">&minus;$1,000</span></li>
+              <li><span>GM Rewards sign-up &amp; spend</span><span class="amt">&minus;$500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$57,689&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-apr">0% APR for 60 months available in place of the cash offers, plus no monthly payments for 90 days</li>
+          </ul>
+          <ul class="card-features">
+            <li>5.3L V8 &bull; Trail Boss off-road suspension</li>
+            <li>4WD Crew Cab</li>
+            <li>Surround-view camera</li>
+            <li>16 city / 19 highway MPG</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $69,855 MSRP less a $4,666 dealer discount, available to all buyers. &dagger;Best price of $57,689 additionally reflects $7,500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26652 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 CHEVROLET EQUINOX — Stock #C26591 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/equinox-c26591.jpg" alt="2026 2026 Chevrolet Equinox — AWD LT &bull; Black" loading="lazy">
+          <span class="card-badge b-chevrolet">Chevrolet</span>
+          <div class="card-discount-badge">
+            <div class="percent">$499</div>
+            <div class="off-label">Per Month</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Chevrolet Equinox</h3>
+          <div class="trim">AWD LT &bull; Black &bull; Stock #C26591</div>
+          <div class="card-demo">Courtesy transportation unit &bull; 1,492 miles</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$35,725</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$2,862</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$32,863*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $500 more</div>
+            <ul class="cond-list">
+              <li><span>My Rewards sign-up &amp; spend</span><span class="amt">&minus;$500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$32,363&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-finance">$499/mo &bull; 84 months &bull; $1,000 down &bull; includes PA tax &amp; fees &bull; est. 6.25% APR</li>
+          </ul>
+          <ul class="card-features">
+            <li>All-wheel drive</li>
+            <li>Surround-view camera</li>
+            <li>Apple CarPlay &amp; Android Auto</li>
+            <li>25 city / 29 highway MPG</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $35,725 MSRP less a $2,862 dealer discount, available to all buyers. &dagger;Best price of $32,363 additionally reflects $500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26591 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+      <!-- 2026 CHEVROLET TRAX — Stock #C26612 -->
+      <div class="special-card">
+        <div class="card-image">
+          <img src="images/trax-c26612.jpg" alt="2026 2026 Chevrolet Trax — 1LT &bull; Red" loading="lazy">
+          <span class="card-badge b-chevrolet">Chevrolet</span>
+          <div class="card-discount-badge">
+            <div class="percent">$369</div>
+            <div class="off-label">Per Month</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>2026 Chevrolet Trax</h3>
+          <div class="trim">1LT &bull; Red &bull; Stock #C26612</div>
+          <div class="card-demo">Courtesy transportation unit &bull; 2,397 miles</div>
+          <div class="card-pricing">
+            <div class="price-row">
+              <span class="label">MSRP</span>
+              <span class="value msrp-strike">$26,820</span>
+            </div>
+            <div class="price-row">
+              <span class="label">Dealer Discount</span>
+              <span class="value savings">&minus;$1,820</span>
+            </div>
+            <div class="price-divider"></div>
+            <div class="price-row">
+              <span class="label">Sale Price</span>
+              <span class="value sale-price">$25,000*</span>
+            </div>
+          </div>
+          <div class="card-conditional">
+            <div class="cond-head">If you qualify, save $1,250 more</div>
+            <ul class="cond-list">
+              <li><span>Bonus cash</span><span class="amt">&minus;$750</span></li>
+              <li><span>My Rewards sign-up &amp; spend</span><span class="amt">&minus;$500</span></li>
+            </ul>
+            <div class="cond-total">
+              <span class="label">Your Best Price</span>
+              <span class="value">$23,750&dagger;</span>
+            </div>
+          </div>
+          <ul class="card-offers">
+            <li class="offer-finance">$369/mo &bull; 84 months &bull; $1,000 down &bull; includes PA tax &amp; fees &bull; est. 6.25% APR</li>
+          </ul>
+          <ul class="card-features">
+            <li>28 city / 32 highway MPG</li>
+            <li>Apple CarPlay &amp; Android Auto</li>
+            <li>Adaptive Cruise Control</li>
+            <li>Seats 5</li>
+          </ul>
+          <div class="card-disclaimer">
+            *Sale price is $26,820 MSRP less a $1,820 dealer discount, available to all buyers. &dagger;Best price of $23,750 additionally reflects $1,250 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26612 only. Offer expires 08/31/2026.
+          </div>
+          <div class="card-footer">
+            <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
+            <a href="https://www.bobweaverauto.com/new-inventory/index.htm" target="_parent" class="btn btn-outline">View Inventory</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- ============ PRE-OWNED SECTION ============ -->
@@ -826,27 +1519,36 @@
   <section class="disclaimer">
     <div class="container">
 
-      <h3>Pricing &amp; Discount</h3>
+      <h3>How to Read These Prices</h3>
       <ul>
-        <li>Advertised discounts of 12% off MSRP (Big Horn and Laramie) and advertised sale price (Warlock) apply to the specific in-stock 2026 Ram 1500 units identified by stock number only.</li>
-        <li>Sample prices shown are based on representative MSRPs and are for illustration purposes. Actual sale price will be calculated based on the specific vehicle&rsquo;s window sticker MSRP at the time of purchase.</li>
-        <li>Prices do not include tax, title, license, registration, destination/delivery charges, or dealer-installed accessories. Dealer fees may apply.</li>
-        <li>Discounts may not be combined with certain other manufacturer incentives, rebates, or special financing offers. See dealer for offer compatibility.</li>
+        <li><strong>Sale Price (*)</strong> is the vehicle&rsquo;s MSRP less the Bob Weaver dealer discount. Every buyer gets this price, with no conditions to meet.</li>
+        <li><strong>Your Best Price (&dagger;)</strong> additionally subtracts manufacturer offers that <em>not every buyer will qualify for</em> &mdash; each one is itemized on the card so you can see exactly which apply to you. Qualification is determined at the time of sale.</li>
+        <li>Conditional offers shown may include consumer cash, bonus cash, trade-in allowances (which require you to trade a qualifying 2012-or-newer vehicle), and GM Rewards or My Rewards sign-up and spend bonuses (which require enrolling in the program and redeeming earned points).</li>
+      </ul>
+
+      <h3>Financing &amp; Lease Offers</h3>
+      <ul>
+        <li>Advertised APR offers &mdash; 0% for 60 months, 2.9% for 72 months, 4.9% for 72 months &mdash; are available only to well-qualified buyers who finance through the manufacturer&rsquo;s captive lender (GM Financial or Stellantis Financial), subject to credit approval. Not all buyers will qualify.</li>
+        <li><strong>Special financing rates generally cannot be combined with manufacturer cash offers.</strong> Where a card shows both an APR offer and a cash savings figure, they are alternatives &mdash; you choose one. Ask us to run both so you can see which saves you more.</li>
+        <li>Advertised lease payments are 36-month, 12,000-mile-per-year leases with the stated amount due at signing, and include Pennsylvania tax and fees. Payments are estimates based on current program terms and are subject to credit approval and change without notice.</li>
+        <li>Advertised finance payments on the Equinox and Trax are 84-month terms with $1,000 down at an estimated 6.25% APR and include Pennsylvania tax and fees. Your actual rate, term and payment depend on your credit and are determined at the time of sale.</li>
       </ul>
 
       <h3>Vehicle Availability</h3>
       <ul>
-        <li>Offers apply to in-stock vehicles only and are subject to prior sale on a first-come, first-served basis.</li>
-        <li>Photographs and feature descriptions are for reference purposes only and may not reflect the exact color, trim, options, or specifications of specific in-stock vehicles.</li>
+        <li>Every offer on this page applies to one specific vehicle, identified by stock number, and is subject to prior sale on a first-come, first-served basis.</li>
+        <li>Vehicles flagged as a <strong>demo</strong> or <strong>courtesy transportation unit</strong> have been driven and carry the mileage shown on the card. They are sold as new vehicles.</li>
+        <li>Photographs are of the actual vehicle where available. Feature descriptions are for reference and may not reflect every option on a specific unit.</li>
         <li>Dealer is not responsible for typographical, photographic, or pricing errors. All offers subject to correction.</li>
       </ul>
 
       <h3>Offer Terms</h3>
       <ul>
-        <li>All offers valid only at Bob Weaver Auto, 1777 Centre Turnpike, Pottsville, PA 17901.</li>
-        <li>All offers expire 07/31/2026 unless extended, modified, or withdrawn by the manufacturer or dealer prior to that date.</li>
+        <li>Prices do not include tax, title, license, registration, or the $490 documentary fee.</li>
+        <li>All offers valid only at Bob Weaver Auto, 2174 West Market Street, Pottsville, PA 17901.</li>
+        <li>All offers expire 08/31/2026 unless extended, modified, or withdrawn by the manufacturer or dealer prior to that date.</li>
         <li>Must take delivery from dealer stock by the offer expiration date.</li>
-        <li>See dealer for complete details and current offer availability.</li>
+        <li>See dealer for complete details and current offer availability. Call (570) 622-7191.</li>
       </ul>
 
     </div>
