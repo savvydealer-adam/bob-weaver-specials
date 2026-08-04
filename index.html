@@ -1556,25 +1556,30 @@
 
 
   <!-- Tell the parent page how tall we actually are, so the iframe can size itself.
-       Harmless if the parent has no listener. See ticket #29050. -->
+       Measure BODY, not documentElement: documentElement stretches to fill the iframe
+       viewport, so reporting it creates a feedback loop that grows without bound
+       (it reached 54,720px on 2026-08-04 before this was fixed). Body height is
+       content-driven and independent of the viewport. Ticket #29050. -->
   <script>
   (function () {
     var last = 0;
+    function contentHeight() {
+      var b = document.body;
+      if (!b) return 0;
+      var r = b.getBoundingClientRect().height;
+      var s = window.getComputedStyle(b);
+      return Math.ceil(r + parseFloat(s.marginTop || 0) + parseFloat(s.marginBottom || 0));
+    }
     function post() {
-      var h = Math.max(
-        document.documentElement.scrollHeight,
-        document.body ? document.body.scrollHeight : 0
-      );
-      if (Math.abs(h - last) < 24) return;
+      var h = contentHeight();
+      if (!h || Math.abs(h - last) < 8) return;
       last = h;
       try { parent.postMessage({ bwSpecialsHeight: h }, '*'); } catch (e) {}
     }
     window.addEventListener('load', post);
     window.addEventListener('resize', post);
     document.addEventListener('DOMContentLoaded', post);
-    if (window.ResizeObserver && document.documentElement) {
-      new ResizeObserver(post).observe(document.documentElement);
-    }
+    if (window.ResizeObserver && document.body) new ResizeObserver(post).observe(document.body);
     setInterval(post, 1000);
     post();
   })();
