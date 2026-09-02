@@ -1650,7 +1650,10 @@
       var h = contentHeight();
       if (!h || Math.abs(h - last) < 8) return;
       last = h;
-      try { parent.postMessage({ bwSpecialsHeight: h }, '*'); } catch (e) {}
+      // savvyEmbedHeight is the platform's contract (CmsBody.astro sizes a .cms-autosize
+      // embed from it); bwSpecialsHeight is the original key from ticket #29050, kept so
+      // nothing breaks if an older listener is still the one running.
+      try { parent.postMessage({ savvyEmbedHeight: h, bwSpecialsHeight: h }, '*'); } catch (e) {}
     }
     window.addEventListener('load', post);
     window.addEventListener('resize', post);
