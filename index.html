@@ -745,6 +745,12 @@
       .hero h1 { font-size: 2rem; }
       .promo-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
     }
+    /* GMC tile strip — same artwork that runs on weavergmc.com, links there */
+    .gmc-tiles { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto 36px; padding: 0 20px; display: grid; gap: 18px; }
+    .gmc-tiles-lede { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--loyal-navy); margin: 0 0 4px; font-size: 1.05rem; }
+    .gmc-tile { display: block; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(32,23,71,.18); }
+    .gmc-tile img { display: block; width: 100%; height: auto; }
+    @media (max-width: 759px) { .gmc-tiles { grid-template-columns: 1fr; } .gmc-tile { max-width: 600px; margin: 0 auto; } }
   </style>
 </head>
 <body>
@@ -1311,6 +1317,27 @@
       <h2>Chevrolet &amp; GMC</h2>
       <p>Trucks and SUVs from the Chevrolet Buick GMC store, priced here exactly as they are priced on the vehicle page.</p>
     </div>
+    <div class="gmc-tiles">
+      <p class="gmc-tiles-lede">This month&rsquo;s GMC offers &mdash; tap a tile for the full breakdown on the Bob Weaver GMC site.</p>
+      <a class="gmc-tile" href="https://www.weavergmc.com/new/GMC/2026-GMC-Sierra-1500-1f7774eaac185b54f99274c29a349bac.htm" target="_parent" rel="noopener">
+        <picture>
+          <source media="(min-width: 760px)" srcset="images/tiles/bw-gmc-sierra-1500-sept2026-2000x500.png">
+          <img src="images/tiles/bw-gmc-sierra-1500-sept2026-600x450.png" alt="2026 GMC Sierra 1500 SLE Crew Cab, stock G26587 — save up to $12,265, sale price $55,955, or 0% APR for 60 months. See details at Bob Weaver GMC.">
+        </picture>
+      </a>
+      <a class="gmc-tile" href="https://www.weavergmc.com/new/GMC/2026-GMC-Sierra-2500-HD-95f21201ac180d8e4ec892289bfedb75.htm" target="_parent" rel="noopener">
+        <picture>
+          <source media="(min-width: 760px)" srcset="images/tiles/bw-gmc-sierra-2500hd-sept2026-2000x500.png">
+          <img src="images/tiles/bw-gmc-sierra-2500hd-sept2026-600x450.png" alt="2026 GMC Sierra 2500HD SLE Crew Cab, stock G26629 — save up to $6,874, sale price $62,836. See details at Bob Weaver GMC.">
+        </picture>
+      </a>
+      <a class="gmc-tile" href="https://www.weavergmc.com/new/GMC/2026-GMC-Canyon-f5ad78dcac185184d8a067b1d9833388.htm" target="_parent" rel="noopener">
+        <picture>
+          <source media="(min-width: 760px)" srcset="images/tiles/bw-gmc-canyon-sept2026-2000x500.png">
+          <img src="images/tiles/bw-gmc-canyon-sept2026-600x450.png" alt="2026 GMC Canyon Elevation Crew Cab, stock G26671, in transit — save up to $5,035, sale price $46,620, or 5.9% APR for 84 months. See details at Bob Weaver GMC.">
+        </picture>
+      </a>
+    </div>
     <div class="specials-grid">
 
       <!-- 2026 Chevrolet Silverado 1500 — Stock #C26652 -->
@@ -1319,7 +1346,7 @@
           <img src="images/c26652.jpg" alt="2026 Chevrolet Silverado 1500 LT Trail Boss in Summit White" loading="lazy">
           <span class="card-badge b-chevrolet">Chevrolet</span>
           <div class="card-discount-badge">
-            <div class="percent sm">$10,666</div>
+            <div class="percent sm">$11,266</div>
             <div class="off-label">Total Savings</div>
           </div>
         </div>
@@ -1333,7 +1360,7 @@
             </div>
             <div class="price-row">
               <span class="label">Dealer Discount</span>
-              <span class="value savings">&minus;$4,666</span>
+              <span class="value savings">&minus;$5,266</span>
             </div>
             <div class="price-row">
               <span class="label">Customer Cash</span>
@@ -1346,7 +1373,7 @@
             <div class="price-divider"></div>
             <div class="price-row">
               <span class="label">Sale Price</span>
-              <span class="value sale-price">$59,189*</span>
+              <span class="value sale-price">$58,589*</span>
             </div>
           </div>
           <div class="card-conditional">
@@ -1357,7 +1384,7 @@
             </ul>
             <div class="cond-total">
               <span class="label">Your Best Price</span>
-              <span class="value">$58,189&dagger;</span>
+              <span class="value">$57,589&dagger;</span>
             </div>
           </div>
           <ul class="card-features">
@@ -1367,7 +1394,7 @@
             <li>16 city / 19 highway MPG</li>
           </ul>
           <div class="card-disclaimer">
-            *Sale price is $69,855 MSRP less a $4,666 dealer discount and $4,250 Customer Cash, $1,750 Bonus Cash, available to all buyers. &dagger;Best price of $58,189 additionally reflects $1,000 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26652 only. Offer expires 09/30/2026.
+            *Sale price is $69,855 MSRP less a $5,266 dealer discount and $4,250 Customer Cash, $1,750 Bonus Cash, available to all buyers. &dagger;Best price of $57,589 additionally reflects $1,000 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26652 only. Offer expires 09/30/2026.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
@@ -1381,7 +1408,7 @@
           <img src="images/g26587.jpg" alt="2026 GMC Sierra 1500 SLE in Summit White" loading="lazy">
           <span class="card-badge b-gmc">GMC</span>
           <div class="card-discount-badge">
-            <div class="percent sm">$8,164</div>
+            <div class="percent sm">$8,765</div>
             <div class="off-label">Total Savings</div>
           </div>
         </div>
@@ -1395,7 +1422,7 @@
             </div>
             <div class="price-row">
               <span class="label">Dealer Discount</span>
-              <span class="value savings">&minus;$4,164</span>
+              <span class="value savings">&minus;$4,765</span>
             </div>
             <div class="price-row">
               <span class="label">Purchase Allowance</span>
@@ -1408,7 +1435,7 @@
             <div class="price-divider"></div>
             <div class="price-row">
               <span class="label">Sale Price</span>
-              <span class="value sale-price">$56,556*</span>
+              <span class="value sale-price">$55,955*</span>
             </div>
           </div>
           <div class="card-conditional">
@@ -1419,7 +1446,7 @@
             </ul>
             <div class="cond-total">
               <span class="label">Your Best Price</span>
-              <span class="value">$55,556&dagger;</span>
+              <span class="value">$54,955&dagger;</span>
             </div>
           </div>
           <ul class="card-features">
@@ -1429,7 +1456,7 @@
             <li>15 city / 18 highway MPG</li>
           </ul>
           <div class="card-disclaimer">
-            *Sale price is $64,720 MSRP less a $4,164 dealer discount and $1,500 Purchase Allowance, $2,500 Bonus Cash, available to all buyers. &dagger;Best price of $55,556 additionally reflects $1,000 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26587 only. Offer expires 09/30/2026.
+            *Sale price is $64,720 MSRP less a $4,765 dealer discount and $1,500 Purchase Allowance, $2,500 Bonus Cash, available to all buyers. &dagger;Best price of $54,955 additionally reflects $1,000 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26587 only. Offer expires 09/30/2026.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
@@ -1443,7 +1470,7 @@
           <img src="images/g26629.jpg" alt="2026 GMC Sierra 2500HD SLE in Sterling Metallic" loading="lazy">
           <span class="card-badge b-gmc">GMC</span>
           <div class="card-discount-badge">
-            <div class="percent sm">$5,773</div>
+            <div class="percent sm">$6,374</div>
             <div class="off-label">Total Savings</div>
           </div>
         </div>
@@ -1457,7 +1484,7 @@
             </div>
             <div class="price-row">
               <span class="label">Dealer Discount</span>
-              <span class="value savings">&minus;$4,773</span>
+              <span class="value savings">&minus;$5,374</span>
             </div>
             <div class="price-row">
               <span class="label">Purchase Allowance</span>
@@ -1466,7 +1493,7 @@
             <div class="price-divider"></div>
             <div class="price-row">
               <span class="label">Sale Price</span>
-              <span class="value sale-price">$63,437*</span>
+              <span class="value sale-price">$62,836*</span>
             </div>
           </div>
           <div class="card-conditional">
@@ -1477,7 +1504,7 @@
             </ul>
             <div class="cond-total">
               <span class="label">Your Best Price</span>
-              <span class="value">$62,437&dagger;</span>
+              <span class="value">$61,836&dagger;</span>
             </div>
           </div>
           <ul class="card-features">
@@ -1487,7 +1514,7 @@
             <li>Seats 6</li>
           </ul>
           <div class="card-disclaimer">
-            *Sale price is $69,210 MSRP less a $4,773 dealer discount and $1,000 Purchase Allowance, available to all buyers. &dagger;Best price of $62,437 additionally reflects $1,000 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26629 only. Offer expires 09/30/2026.
+            *Sale price is $69,210 MSRP less a $5,374 dealer discount and $1,000 Purchase Allowance, available to all buyers. &dagger;Best price of $61,836 additionally reflects $1,000 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #G26629 only. Offer expires 09/30/2026.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
@@ -1501,7 +1528,7 @@
           <img src="images/c26582.jpg" alt="2026 Chevrolet Blazer EV AWD LT in Sterling Gray Metallic" loading="lazy">
           <span class="card-badge b-chevrolet">Chevrolet</span>
           <div class="card-discount-badge">
-            <div class="percent sm">$11,121</div>
+            <div class="percent sm">$13,621</div>
             <div class="off-label">Total Savings</div>
           </div>
         </div>
@@ -1515,7 +1542,7 @@
             </div>
             <div class="price-row">
               <span class="label">Dealer Discount</span>
-              <span class="value savings">&minus;$10,121</span>
+              <span class="value savings">&minus;$12,621</span>
             </div>
             <div class="price-row">
               <span class="label">Customer Cash</span>
@@ -1524,7 +1551,7 @@
             <div class="price-divider"></div>
             <div class="price-row">
               <span class="label">Sale Price</span>
-              <span class="value sale-price">$41,334*</span>
+              <span class="value sale-price">$38,834*</span>
             </div>
           </div>
           <div class="card-conditional">
@@ -1536,7 +1563,7 @@
             </ul>
             <div class="cond-total">
               <span class="label">Your Best Price</span>
-              <span class="value">$39,834&dagger;</span>
+              <span class="value">$37,334&dagger;</span>
             </div>
           </div>
           <ul class="card-features">
@@ -1546,7 +1573,7 @@
             <li>102 city / 86 highway MPG</li>
           </ul>
           <div class="card-disclaimer">
-            This vehicle is a courtesy transportation unit with 2,463 miles on it and is sold as a new vehicle. *Sale price is $52,455 MSRP less a $10,121 dealer discount and $1,000 Customer Cash, available to all buyers. &dagger;Best price of $39,834 additionally reflects $1,500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26582 only. Offer expires 09/30/2026.
+            This vehicle is a courtesy transportation unit with 2,463 miles on it and is sold as a new vehicle. *Sale price is $52,455 MSRP less a $12,621 dealer discount and $1,000 Customer Cash, available to all buyers. &dagger;Best price of $37,334 additionally reflects $1,500 in offers not all buyers will qualify for &mdash; see the itemized list above and the full disclaimer below. Tax, title, license, registration and a $490 documentary fee are additional. Stock #C26582 only. Offer expires 09/30/2026.
           </div>
           <div class="card-footer">
             <a href="tel:5706227191" class="btn btn-primary">Call Now</a>
