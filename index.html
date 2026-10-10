@@ -752,9 +752,22 @@
     /* GMC tile strip — same artwork that runs on weavergmc.com; links stay on this site */
     .gmc-tiles { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto 36px; padding: 0 20px; display: grid; gap: 18px; }
     .gmc-tiles-lede { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--loyal-navy); margin: 0 0 4px; font-size: 1.05rem; }
-    .gmc-tile { display: block; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(32,23,71,.18); }
-    .gmc-tile img { display: block; width: 100%; height: auto; }
-    @media (max-width: 759px) { .gmc-tiles { grid-template-columns: 1fr; } .gmc-tile { max-width: 600px; margin: 0 auto; } }
+    .gmc-tile { display: grid; grid-template-columns: 1.55fr 1fr; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(32,23,71,.18); background: linear-gradient(115deg, #201747 0%, #2a1b5c 70%, #33206b 100%); color: #fff; text-decoration: none; }
+    .gmc-tile .gt-body { padding: 22px 8px 20px 30px; min-width: 0; }
+    .gmc-tile .gt-photo { background-color: #eef0f3; background-size: cover; background-repeat: no-repeat; background-position: 50% 38%; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); min-height: 250px; }
+    .gmc-tile .gt-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+    .gmc-tile .gt-pill { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-weight: 700; letter-spacing: .14em; font-size: 1rem; background: var(--americana-orange); color: #fff; border-radius: 999px; padding: 4px 16px 5px; }
+    .gmc-tile .gt-trim { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-weight: 600; letter-spacing: .14em; font-size: .95rem; color: rgba(255,255,255,.85); }
+    .gmc-tile .gt-head { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; font-weight: 700; letter-spacing: .03em; line-height: 1; font-size: clamp(2.5rem, 6.2vw, 4.4rem); margin: 12px 0 8px; }
+    .gmc-tile .gt-head span { color: var(--americana-orange); }
+    .gmc-tile .gt-sub { font-size: 1rem; line-height: 1.35; margin: 0 0 14px; }
+    .gmc-tile .gt-prices { display: flex; flex-wrap: wrap; gap: 10px 30px; align-items: flex-end; margin: 0 0 14px; }
+    .gmc-tile .gt-prices small { display: block; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.68); margin-bottom: 2px; }
+    .gmc-tile .gt-prices b { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: .04em; font-size: 1.9rem; line-height: 1; }
+    .gmc-tile .gt-prices .gt-sale b { font-size: 2.4rem; }
+    .gmc-tile .gt-prices .gt-msrp b { text-decoration: line-through; text-decoration-color: var(--americana-orange); color: rgba(255,255,255,.72); }
+    .gmc-tile .gt-fine { font-size: .7rem; line-height: 1.4; color: rgba(255,255,255,.8); margin: 0; }
+    @media (max-width: 759px) { .gmc-tile { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; } .gmc-tile .gt-photo { order: -1; clip-path: none; min-height: 0; aspect-ratio: 3 / 1.25; background-position: 50% 52%; } .gmc-tile .gt-body { padding: 16px 18px 18px; } }
   </style>
 </head>
 <body>
@@ -1181,6 +1194,51 @@
     <div class="section-intro">
       <h2>Chevrolet &amp; GMC</h2>
       <p>Trucks and SUVs from the Chevrolet Buick GMC store, priced here exactly as they are priced on the vehicle page.</p>
+    </div>
+    <div class="gmc-tiles">
+      <p class="gmc-tiles-lede">This month&rsquo;s GMC offers. Tap a tile to see the vehicle.</p>
+      <a class="gmc-tile" href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-1500-sle-1gtuubed9tz252228" target="_parent" rel="noopener">
+        <div class="gt-body">
+          <div class="gt-top"><span class="gt-pill">2026 GMC Sierra 1500</span><span class="gt-trim">SLE 4WD Crew Cab &middot; 5.3L V8 &middot; Stock #G26587</span></div>
+          <div class="gt-head">Save up to <span>$12,265</span></div>
+          <p class="gt-sub"><strong>Or 0% APR for 60 months instead.</strong> Includes $1,500 Purchase Allowance and $2,500 Bonus Cash.</p>
+          <div class="gt-prices">
+            <div class="gt-msrp"><small>MSRP</small><b>$64,720</b></div>
+            <div class="gt-sale"><small>Sale price, every buyer</small><b>$56,445*</b></div>
+            <div><small>If you qualify</small><b>$52,945&dagger;</b></div>
+          </div>
+          <p class="gt-fine">Total savings of $12,265 combines a $4,765 dealer discount with a $1,500 Purchase Allowance and $2,500 Bonus Cash available to all buyers, plus a $3,000 GM Trade Assist requiring a qualifying trade-in and a $500 GM Rewards sign-up-and-spend bonus requiring program enrollment and point redemption; not all buyers will qualify. *Sale price of $56,445 is available to all buyers. &dagger;Price of $52,945 requires every conditional offer. 0% APR for 60 months is available to well-qualified buyers financing through GM Financial IN PLACE OF the cash offers, not in addition to them (program 26-40GF-007). Sale price includes the $490 dealer documentary fee. Plus tax, title, license and registration. Stock #G26587 only, subject to prior sale. Take delivery by 10/31/2026. See dealer for complete details.</p>
+        </div>
+        <div class="gt-photo" role="img" aria-label="2026 GMC Sierra 1500, stock G26587" style="background-image:url('images/g26587.jpg')"></div>
+      </a>
+      <a class="gmc-tile" href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-sierra-2500hd-sle-1gt4ume78tf272655" target="_parent" rel="noopener">
+        <div class="gt-body">
+          <div class="gt-top"><span class="gt-pill">2026 GMC Sierra 2500HD</span><span class="gt-trim">SLE 4WD Crew Cab &middot; 6.6L V8 Gas &middot; Stock #G26629</span></div>
+          <div class="gt-head">Save up to <span>$6,874</span></div>
+          <p class="gt-sub"><strong>Includes $1,000 Purchase Allowance.</strong> Sale price is for every buyer.</p>
+          <div class="gt-prices">
+            <div class="gt-msrp"><small>MSRP</small><b>$69,210</b></div>
+            <div class="gt-sale"><small>Sale price, every buyer</small><b>$63,326*</b></div>
+            <div><small>If you qualify</small><b>$62,826&dagger;</b></div>
+          </div>
+          <p class="gt-fine">Total savings of $6,874 combines a $5,374 dealer discount with a $1,000 Purchase Allowance available to all buyers, plus a $500 GM Rewards sign-up-and-spend bonus requiring program enrollment and point redemption; not all buyers will qualify. *Sale price of $63,326 is available to all buyers. &dagger;Price of $62,826 requires the conditional offer. Sale price includes the $490 dealer documentary fee. Plus tax, title, license and registration. Stock #G26629 only, subject to prior sale. Take delivery by 10/31/2026. See dealer for complete details.</p>
+        </div>
+        <div class="gt-photo" role="img" aria-label="2026 GMC Sierra 2500HD, stock G26629" style="background-image:url('images/g26629.jpg')"></div>
+      </a>
+      <a class="gmc-tile" href="https://www.bobweaverauto.com/vehicle-info/new-2026-gmc-terrain-awd-at4-3gkalyeg8tl511936" target="_parent" rel="noopener">
+        <div class="gt-body">
+          <div class="gt-top"><span class="gt-pill">2026 GMC Terrain</span><span class="gt-trim">AT4 AWD &middot; 1.5L Turbo &middot; Stock #G26645</span></div>
+          <div class="gt-head">Save up to <span>$3,577</span></div>
+          <p class="gt-sub"><strong>Courtesy transportation unit, 1,685 miles.</strong> Sale price is for every buyer.</p>
+          <div class="gt-prices">
+            <div class="gt-msrp"><small>MSRP</small><b>$42,925</b></div>
+            <div class="gt-sale"><small>Sale price, every buyer</small><b>$40,338*</b></div>
+            <div><small>If you qualify</small><b>$39,838&dagger;</b></div>
+          </div>
+          <p class="gt-fine">Total savings of $3,577 combines a $3,077 dealer discount available to all buyers, plus a $500 GM Rewards sign-up-and-spend bonus requiring program enrollment and point redemption; not all buyers will qualify. *Sale price of $40,338 is available to all buyers. &dagger;Price of $39,838 requires the conditional offer. Courtesy transportation vehicle with 1,685 miles. Sale price includes the $490 dealer documentary fee. Plus tax, title, license and registration. Stock #G26645 only, subject to prior sale. Take delivery by 10/31/2026. See dealer for complete details.</p>
+        </div>
+        <div class="gt-photo" role="img" aria-label="2026 GMC Terrain, stock G26645" style="background-image:url('https://content.homenetiol.com/1200x900/3230ff08401042eda59e05c90d74cfcb.jpg')"></div>
+      </a>
     </div>
     <div class="specials-grid">
 
